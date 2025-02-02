@@ -16,13 +16,6 @@
       <description>&lt;p&gt;Test content&lt;/p&gt;</description>
     </item>
     <item>
-      <title>My Fourth Post</title>
-      <link>http://localhost:1313/my-fourth-post/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/my-fourth-post/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>My Second Post</title>
       <link>http://localhost:1313/my-second-post/</link>
       <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
