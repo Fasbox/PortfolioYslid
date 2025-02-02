@@ -1,0 +1,25 @@
+<div class="relatedPosts">
+  <h2>Posts Relacionados</h2>
+
+  {{ $current := . }} {{ $related := slice }} {{ range (.GetTerms "categories")
+  }} {{ $related = $related | append (where site.RegularPages
+  "Params.categories" "intersect" (slice .Name)) }} {{ end }} {{ $related =
+  $related | uniq | shuffle | first 5 }} {{ if gt (len $related) 0 }}
+  <ul>
+    {{ range $related }} {{ if ne .Permalink $current.Permalink }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <img
+          src="{{ .Params.image }}"
+          alt="{{ .Title }}"
+          class="relatedPostImage"
+        />
+        <span>{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+  {{ else }}
+  <p>No hay posts relacionados.</p>
+  {{ end }}
+</div>
