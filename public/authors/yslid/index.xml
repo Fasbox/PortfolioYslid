@@ -6,14 +6,14 @@
     <description>Recent content in Yslid on Yslids Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2025 01:12:32 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2025 12:11:24 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/authors/yslid/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Post as a Try</title>
+      <title>Post as a try</title>
       <link>http://localhost:1313/posts/post-as-a-try/</link>
-      <pubDate>Sun, 02 Feb 2025 01:12:32 -0500</pubDate>
+      <pubDate>Tue, 04 Feb 2025 12:11:24 -0500</pubDate>
       <guid>http://localhost:1313/posts/post-as-a-try/</guid>
-      <description></description>
+      <description>&lt;p&gt;hello world&lt;img src=&#34;http://localhost:1313/ImagenesPosts/WIN_20240328_21_51_10_Pro.jpg&#34; alt=&#34;WIN_20240328_21_51_10_Pro.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Firts Post</title>
@@ -21,20 +21,6 @@
       <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
       <guid>http://localhost:1313/my-first-post/</guid>
       <description>&lt;p&gt;Test content&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Fourth Post</title>
-      <link>http://localhost:1313/my-fourth-post/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/my-fourth-post/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Fourth Post</title>
-      <link>http://localhost:1313/post-as-a-try/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/post-as-a-try/</guid>
-      <description>&lt;p&gt;hello world![[WIN_20240328_21_51_10_Pro.jpg]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Second Post</title>
