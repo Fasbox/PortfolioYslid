@@ -1,10 +1,10 @@
 +++
-date = '2025-02-04T12:31:40-05:00'
+date = '2025-02-05T20:24:42-05:00'
 draft = false
 title = 'Post as a try'
 description = "Testing out how script goes"
-image = "/ImagenesPosts/AutomationBG.webp"
-imageBig = "/ImagenesPosts/AutomationBG.webp"
+image = "/ImagenesPosts/595de4b51eb119b0.webp"
+imageBig = "/ImagenesPosts/595de4b51eb119b0.webp"
 categories = ["try"]
 authors = ["Yslid"]
 avatar = "/images/avatar.webp"

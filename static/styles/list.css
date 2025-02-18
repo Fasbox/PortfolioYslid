@@ -1,0 +1,171 @@
+/* LIST START */
+
+/* =========================
+   ESTILOS BASE PARA LA LISTA
+   ========================= */
+   .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 0 !important; /* Sin padding en todo momento */
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 2px solid var(--bgSoft);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .listItemImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .listItemTexts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .listItemDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .listItemAvatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .listItemCategories {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .listItemCategory {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    font-size: 14px;
+  }
+  
+  /* =========================
+     RESPONSIVE PARA CELULARES (max-width: 767px)
+     ========================= */
+  @media (max-width: 767px) {
+    .list {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .listItem {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      max-height: 500px;
+      overflow: hidden;
+    }
+    .listItemImage {
+      width: 100%;
+      max-height: 200px;
+      height: auto;
+    }
+    .listItemTexts {
+      justify-content: center;
+      text-align: center;
+    }
+    .listItemDetail,
+    .listItemCategories {
+      justify-content: center;
+    }
+    .listItemDescription {
+      max-height: 115px;
+      overflow: hidden;
+    }
+  }
+  
+/* =========================
+   RESPONSIVE PARA PANTALLAS ENTRE 1200px Y 1538px
+   ========================= */
+   @media (min-width: 1200px) and (max-width: 1538px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas */
+        gap: 30px; /* Espacio entre los posts */
+    }
+
+    .listItem {
+        display: flex;
+        flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+        align-items: center;
+        gap: 25px;
+        padding: 20px;
+        border-radius: 12px;
+        max-height: 300px; /* Se ajusta la altura */
+        overflow: hidden;
+    }
+
+    .listItemImage {
+        width: 180px; /* Imagen más grande */
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .listItemTexts {
+        text-align: left;
+        font-size: 1em;
+        max-width: 65%; /* Limitar ancho del texto */
+        overflow: hidden;
+    }
+
+    .listItemDescription {
+        max-height: 120px; /* Permitir más contenido visible */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Máximo de 4 líneas */
+        -webkit-box-orient: vertical;
+    }
+
+    .listItemDetail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .listItemCategories {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .listItemAvatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+}
+  
+  /* =========================
+     RESPONSIVE PARA PANTALLAS MAYORES A 1538px
+     ========================= */
+  @media (min-width: 1538px) {
+    .list {
+      grid-template-columns: repeat(2, 1fr); /* O puedes usar 3 si prefieres */
+    }
+    /* Los estilos base se aplican, es decir, sin reducción */
+  }
+  
+
+/* LIST END */

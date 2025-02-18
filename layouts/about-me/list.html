@@ -1,0 +1,78 @@
+{{ define "main" }}
+<section class="about-me">
+  <div class="about-me-container">
+    <div class="about-me-image">
+      <img src="/images/AboutMePic.png" alt="My Photo" />
+    </div>
+    <div class="about-me-content">
+      <!-- Contenedor del botón de cambio de idioma -->
+      <div class="lang-toggle-container">
+        <button id="lang-toggle" class="lang-toggle-btn">
+          Change to English
+        </button>
+      </div>
+      <!-- Contenido en español (visible por defecto) -->
+      <div class="about-es">
+        <h1>Sobre Mi</h1>
+        <p>¡Hola, soy Fabian!</p>
+        <p>
+          Desde pequeño, la tecnología me cautivó gracias a esos primeros
+          momentos frente al computador y YouTube, y esa fascinación sigue viva
+          hoy mientras estudio Ingeniería Informática en la Universidad de
+          Envigado. Mi curiosidad me ha llevado a explorar la ciberseguridad,
+          automatizaciones y redes, siempre inspirado por creadores como
+          NateGentile, NetworkChuck, S4vitar y muchos otros.
+        </p>
+        <p>
+          En Yslid's Corner comparto mis aprendizajes, proyectos y también mis
+          errores, porque cada tropiezo es una lección. Además, acompaño cada
+          entrada con videos en inglés y español para practicar el arte de la
+          oratoria. Este rincón es mi espacio personal para plasmar mis risas,
+          fracasos y momentos de asombro.
+        </p>
+        <p>¡Bienvenido a mi aventura tech!</p>
+      </div>
+
+      <!-- Contenido en inglés (oculto por defecto) -->
+      <div class="about-en" style="display: none">
+        <h1>About Me</h1>
+        <p>Hello, I'm Fabian!</p>
+        <p>
+          Since I was a child, technology captivated me from those first moments
+          in front of the computer and YouTube, and that fascination still lives
+          on today as I study Computer Engineering at the University of
+          Envigado. My curiosity has led me to explore cybersecurity,
+          automation, and networks, always inspired by creators like
+          NateGentile, NetworkChuck, S4vitar, and many others.
+        </p>
+        <p>
+          At Yslid's Corner, I share my learnings, projects, and even my
+          mistakes because every stumble is a lesson. I also accompany each post
+          with videos in both English and Spanish to practice public speaking.
+          This is my personal space to showcase my laughter, failures, and
+          moments of awe.
+        </p>
+        <p>Welcome to my tech adventure!</p>
+      </div>
+
+      <!-- Sección de redes sociales y call-to-action -->
+      <div class="about-me-social">
+        <a href="mailto:fabianchavarria06@gmail.com" class="cta-email"
+          >Write me an email</a
+        >
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/fabian-chavarria/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/Fasbox" target="_blank">GitHub</a>
+          <a href="https://www.instagram.com/fabian.onpk/" target="_blank"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "about-me-js.html" . }} {{ end }}

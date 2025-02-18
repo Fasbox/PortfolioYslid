@@ -1,0 +1,153 @@
+/* BANNER START */
+.welcome-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear todo a la izquierda */
+    justify-content: center;
+    text-align: left;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background: transparent; /* Eliminamos el fondo sólido */
+    overflow: hidden;
+}
+
+/* Efecto de Blob más llamativo */
+.blob {
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(50, 180, 240, 0.7) 10%, rgba(140, 0, 255, 0.8) 90%);
+    filter: blur(200px);
+    opacity: 0.6;
+    z-index: 0;
+    animation: breath 4s ease-in-out infinite alternate;
+}
+
+/* Animación de "respiración" */
+@keyframes breath {
+    from {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Contenedor del texto */
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 100%; /* Hace que ocupe todo el espacio permitido */
+}
+
+/* Títulos principales */
+.banner-content h1, .banner-content h2 {
+    margin: 0; /* Elimina cualquier margen inesperado */
+    padding: 0;
+}
+
+/* Descripción - h3 */
+.banner-content h3.description {
+    font-size: 18px;
+    color: var(--textSoft);
+    max-width: 600px;
+    padding: 0; /* Elimina padding lateral */
+    margin: 15px 0 0 0; /* Espacio entre los párrafos */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Asegurar que los párrafos no se peguen */
+.banner-content h3.description + h3.description {
+    margin-top: 20px; /* Separa aún más cada párrafo */
+}
+
+/* Efecto "hacker" en Yslid's Corner */
+.glitch {
+    font-size: 48px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    font-family: 'Press Start 2P', monospace; /* Fuente estilo terminal */
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glitch-animation 1.5s infinite alternate;
+}
+
+.glitch .primary {
+    color: #00ffea; /* Verde neón */
+    text-shadow: 2px 2px 0px rgba(0, 255, 180, 0.8);
+}
+
+.glitch .secondary {
+    color: #00ffea; /* Magenta neón */
+    text-shadow: -2px -2px 0px rgba(0, 255, 180, 0.8);
+}
+
+/* Glitch effect */
+@keyframes glitch-animation {
+    0% {
+        text-shadow: 2px 2px 0px rgba(0, 255, 180, 0.8), -2px -2px 0px rgba(255, 0, 255, 0.8);
+    }
+    50% {
+        text-shadow: -2px -2px 0px rgba(0, 255, 180, 0.8), 2px 2px 0px rgba(255, 0, 255, 0.8);
+    }
+    100% {
+        text-shadow: 2px -2px 0px rgba(0, 255, 180, 0.8), -2px 2px 0px rgba(255, 0, 255, 0.8);
+    }
+}
+
+/* A curious mind in the search of knowledge */
+.banner-content .tagline {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--textSoft);
+    margin-bottom: 15px;
+}
+
+/* Descripción */
+.banner-content .description {
+    font-size: 18px;
+    color: var(--textSoft);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive: Ajustar tamaños en móviles */
+@media (max-width: 768px) {
+    .welcome-banner {
+        padding: 30px 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content h3 {
+        font-size: 16px;
+    }
+
+    .banner-content .tagline {
+        font-size: 24px;
+    }
+
+    .banner-content .description {
+        font-size: 16px;
+    }
+
+    .blob {
+        width: 400px;
+        height: 400px;
+        top: -5%;
+        right: -15%;
+        filter: blur(180px);
+    }
+}
+/* BANNER END */

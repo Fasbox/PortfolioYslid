@@ -8,4 +8,6 @@ imageBig = ""
 categories = []
 authors = ["Yslid"]
 avatar = "/images/avatar.webp"
+videoEs = ""
+videoEn = ""
 +++

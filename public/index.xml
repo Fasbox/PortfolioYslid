@@ -6,35 +6,28 @@
     <description>Recent content on Yslids Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2025 12:31:40 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2025 22:19:51 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Post as a Try</title>
+      <title>Pendientes del blog</title>
+      <link>http://localhost:1313/posts/prueba-mam%C3%A1/</link>
+      <pubDate>Thu, 06 Feb 2025 22:19:51 -0500</pubDate>
+      <guid>http://localhost:1313/posts/prueba-mam%C3%A1/</guid>
+      <description>&lt;h2 id=&#34;pendientes-app&#34;&gt;Pendientes app:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Organizar el responsive de home, pensar bien en los breakpoints de todos los dispositivos&lt;/li&gt;&#xA;&lt;li&gt;Organizar links del footer&lt;/li&gt;&#xA;&lt;li&gt;Crear el primer post de verdad - Pensar/Grabar videos&lt;/li&gt;&#xA;&lt;li&gt;Crear logo&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Try 2</title>
+      <link>http://localhost:1313/posts/try-2/</link>
+      <pubDate>Thu, 06 Feb 2025 20:37:37 -0500</pubDate>
+      <guid>http://localhost:1313/posts/try-2/</guid>
+      <description>&lt;h1 id=&#34;bienvenido&#34;&gt;Bienvenido&lt;/h1&gt;&#xA;&lt;p&gt;hola soy Fabián&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;youtube-videos&#34;&gt;YouTube Videos&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spanish Video:&lt;/strong&gt;&#xA;videoEs: &amp;ldquo;-AdjRO3UgW0&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;English Video:&lt;/strong&gt;&#xA;videoEs: &amp;ldquo;-AdjRO3UgW0&amp;rdquo;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;Prueba de videos&lt;/p&gt;&#xA;&lt;p&gt;#cibersec #network&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post as a try</title>
       <link>http://localhost:1313/posts/post-as-a-try/</link>
-      <pubDate>Tue, 04 Feb 2025 12:31:40 -0500</pubDate>
+      <pubDate>Wed, 05 Feb 2025 20:24:42 -0500</pubDate>
       <guid>http://localhost:1313/posts/post-as-a-try/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>My Firts Post</title>
-      <link>http://localhost:1313/my-first-post/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/my-first-post/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Second Post</title>
-      <link>http://localhost:1313/my-second-post/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/my-second-post/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Third Post</title>
-      <link>http://localhost:1313/my-third-post/</link>
-      <pubDate>Wed, 04 Dec 2024 21:43:59 -0500</pubDate>
-      <guid>http://localhost:1313/my-third-post/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <description>&lt;p&gt;hello world&lt;img src=&#34;http://localhost:1313/ImagenesPosts/WIN_20240328_21_51_10_Pro.jpg&#34; alt=&#34;WIN_20240328_21_51_10_Pro.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

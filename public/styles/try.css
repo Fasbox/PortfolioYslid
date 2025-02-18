@@ -1,0 +1,1048 @@
+:root {
+    --bg: #0c1e2d;        /* Un azul marino muy oscuro */
+    --bgSoft: #1c3a55;    /* Un azul oscuro un poco más claro para fondos suaves */
+    --text: #e5eff5;      /* Un tono claro, casi blanco con matiz azul */
+    --textSoft: #ccd7dc;  /* Un gris azulado suave para textos secundarios */
+  }
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lato', regular;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*  NAVBAR BASE  */
+   .navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-mobile {
+    display: none;
+  }
+  
+  /* Desktop Navbar (se mantiene igual) */
+  .navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+  }
+  .navbar-desktop .logo a {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .navbar-desktop .links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+  }
+  .navbar-desktop .searchButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  .navbar-desktop .searchInput {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--textSoft);
+    font-size: 16px;
+    width: 150px;
+    display: none;
+  }
+  
+  /* =======================
+     MOBILE NAVBAR
+     ======================= */
+     @media (max-width: 768px) {
+        /* Oculta el desktop */
+        .navbar-desktop {
+          display: none;
+        }
+        
+        /* Mobile Navbar: sticky con offset */
+        .navbar-mobile {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          height: 70px;
+          padding: 0 15px;
+          background-color: var(--bg);
+          position: sticky;
+          top: 10px;  /* Espacio desde el top al hacer scroll */
+          z-index: 1000;
+          /* Aseguramos que sea el contenedor relativo para el mobile-menu */
+          position: relative;
+        }
+        
+        /* Dividir el navbar móvil en 3 secciones */
+        .navbar-mobile .mobile-left,
+        .navbar-mobile .mobile-center,
+        .navbar-mobile .mobile-right {
+          flex: 1;
+        }
+        .navbar-mobile .mobile-left {
+          text-align: left;
+        }
+        .navbar-mobile .mobile-center {
+          text-align: center;
+        }
+        .navbar-mobile .mobile-right {
+          text-align: right;
+        }
+        
+        /* Logo en móvil */
+        .navbar-mobile .logo a {
+          font-weight: bold;
+          font-size: 20px;
+          color: var(--text);
+          text-decoration: none;
+        }
+        
+        /* Botón hamburger */
+        .menu-toggle-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+        .menu-toggle-btn svg rect {
+          fill: white;
+        }
+        
+        /* Ícono de búsqueda en móvil: solo el ícono con borde blanco de 1px */
+        .search-icon {
+          background: none;
+          border: 1px solid white;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .navbar-mobile .search-icon svg path {
+          fill: white !important;
+        }
+        
+        /* Mobile Menu (desplegable): se posiciona debajo del navbar-mobile */
+        .mobile-menu {
+          display: none;
+          flex-direction: column;
+          background-color: var(--bg);
+          padding: 15px;
+          gap: 20px;
+          align-items: flex-start;
+          width: 100%;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          z-index: 999;
+        }
+        .mobile-menu.active {
+          display: flex !important;
+        }
+        
+        /* Mobile Search Overlay */
+        .mobile-search-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 2000;
+        }
+        .mobile-search-input {
+          width: 80%;
+          max-width: 400px;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid var(--bgSoft);
+          border-radius: 8px;
+          margin-bottom: 20px;
+        }
+        .mobile-search-submit,
+        .mobile-search-close {
+          padding: 10px 20px;
+          border: none;
+          background-color: var(--bgSoft);
+          color: var(--text);
+          border-radius: 8px;
+          cursor: pointer;
+          margin: 5px;
+        }
+      }
+/* NAVBAR END */    
+
+/* FOOTER START */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    font-size: 14;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+/* FOOTER END*/
+
+/* BANNER START */
+.welcome-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear todo a la izquierda */
+    justify-content: center;
+    text-align: left;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background: transparent; /* Eliminamos el fondo sólido */
+    overflow: hidden;
+}
+
+/* Efecto de Blob más llamativo */
+.blob {
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(50, 180, 240, 0.7) 10%, rgba(140, 0, 255, 0.8) 90%);
+    filter: blur(200px);
+    opacity: 0.6;
+    z-index: 0;
+    animation: breath 4s ease-in-out infinite alternate;
+}
+
+/* Animación de "respiración" */
+@keyframes breath {
+    from {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Contenedor del texto */
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 100%; /* Hace que ocupe todo el espacio permitido */
+}
+
+/* Títulos principales */
+.banner-content h1, .banner-content h2 {
+    margin: 0; /* Elimina cualquier margen inesperado */
+    padding: 0;
+}
+
+/* Descripción - h3 */
+.banner-content h3.description {
+    font-size: 18px;
+    color: var(--textSoft);
+    max-width: 600px;
+    padding: 0; /* Elimina padding lateral */
+    margin: 15px 0 0 0; /* Espacio entre los párrafos */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Asegurar que los párrafos no se peguen */
+.banner-content h3.description + h3.description {
+    margin-top: 20px; /* Separa aún más cada párrafo */
+}
+
+/* Efecto "hacker" en Yslid's Corner */
+.glitch {
+    font-size: 48px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    font-family: 'Press Start 2P', monospace; /* Fuente estilo terminal */
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glitch-animation 1.5s infinite alternate;
+}
+
+.glitch .primary {
+    color: #00ffea; /* Verde neón */
+    text-shadow: 2px 2px 0px rgba(0, 255, 180, 0.8);
+}
+
+.glitch .secondary {
+    color: #00ffea; /* Magenta neón */
+    text-shadow: -2px -2px 0px rgba(0, 255, 180, 0.8);
+}
+
+/* Glitch effect */
+@keyframes glitch-animation {
+    0% {
+        text-shadow: 2px 2px 0px rgba(0, 255, 180, 0.8), -2px -2px 0px rgba(255, 0, 255, 0.8);
+    }
+    50% {
+        text-shadow: -2px -2px 0px rgba(0, 255, 180, 0.8), 2px 2px 0px rgba(255, 0, 255, 0.8);
+    }
+    100% {
+        text-shadow: 2px -2px 0px rgba(0, 255, 180, 0.8), -2px 2px 0px rgba(255, 0, 255, 0.8);
+    }
+}
+
+/* A curious mind in the search of knowledge */
+.banner-content .tagline {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--textSoft);
+    margin-bottom: 15px;
+}
+
+/* Descripción */
+.banner-content .description {
+    font-size: 18px;
+    color: var(--textSoft);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive: Ajustar tamaños en móviles */
+@media (max-width: 768px) {
+    .welcome-banner {
+        padding: 30px 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content h3 {
+        font-size: 16px;
+    }
+
+    .banner-content .tagline {
+        font-size: 24px;
+    }
+
+    .banner-content .description {
+        font-size: 16px;
+    }
+
+    .blob {
+        width: 400px;
+        height: 400px;
+        top: -5%;
+        right: -15%;
+        filter: blur(180px);
+    }
+}
+/* BANNER END */
+
+
+/* LIST START */
+
+/* =========================
+   ESTILOS BASE PARA LA LISTA
+   ========================= */
+   .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 0 !important; /* Sin padding en todo momento */
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 2px solid var(--bgSoft);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .listItemImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .listItemTexts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .listItemDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .listItemAvatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .listItemCategories {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .listItemCategory {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    font-size: 14px;
+  }
+  
+  /* =========================
+     RESPONSIVE PARA CELULARES (max-width: 767px)
+     ========================= */
+  @media (max-width: 767px) {
+    .list {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .listItem {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      max-height: 500px;
+      overflow: hidden;
+    }
+    .listItemImage {
+      width: 100%;
+      max-height: 200px;
+      height: auto;
+    }
+    .listItemTexts {
+      justify-content: center;
+      text-align: center;
+    }
+    .listItemDetail,
+    .listItemCategories {
+      justify-content: center;
+    }
+    .listItemDescription {
+      max-height: 115px;
+      overflow: hidden;
+    }
+  }
+  
+  /* =========================
+     RESPONSIVE PARA PANTALLAS ENTRE 1200px Y 1538px
+     ========================= */
+  /* Creamos una variable que varía de 0.9 a 1 a medida que el viewport aumenta */
+  @media (min-width: 1200px) and (max-width: 1538px) {
+    :root {
+      /* Cuando vw = 1200 -> scale = 0.9, cuando vw = 1538 -> scale = 1 */
+      --scale-factor: calc(0.9 + ((100vw - 1200px) / 338) * 0.1);
+    }
+    
+    /* Aplicamos el factor a las propiedades que deseamos escalar */
+    .listItem {
+      padding: calc(20px * var(--scale-factor));
+      gap: calc(50px * var(--scale-factor));
+    }
+    
+    .listItemImage {
+      width: calc(200px * var(--scale-factor));
+      height: calc(200px * var(--scale-factor));
+    }
+    
+    .listItemTexts {
+      font-size: calc(1em * var(--scale-factor));
+    }
+    
+    .listItemDetail {
+      font-size: calc(14px * var(--scale-factor));
+    }
+    
+    .listItemCategory {
+      font-size: calc(14px * var(--scale-factor));
+      padding: calc(5px * var(--scale-factor));
+    }
+    
+    /* En este rango, mantenemos 2 columnas */
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* =========================
+     RESPONSIVE PARA PANTALLAS MAYORES A 1538px
+     ========================= */
+  @media (min-width: 1538px) {
+    .list {
+      grid-template-columns: repeat(2, 1fr); /* O puedes usar 3 si prefieres */
+    }
+    /* Los estilos base se aplican, es decir, sin reducción */
+  }
+  
+
+/* LIST END */
+
+/* CATEGORIES PAGE STYLES */
+   .categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .category-card {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .category-card h2 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .category-card .category-count {
+    font-size: 16px;
+    color: var(--textSoft);
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+/* CATEGORIES END */
+
+/* SINGLE START */
+
+.singleHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.singleHeadTexts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.singleHeadTitle {
+    font-size: 48px;
+}
+
+.singleHeadDescription {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.singleHeadDetail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.singleAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.singleCategory {
+    padding: 4px;
+    border-radius: 5px;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    font-size: 14px;
+}
+
+.singleHeadImage {
+    flex: 1;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.singleBottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.singleContent {
+    flex: 3;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.singleContent p,
+.singleContent h1,
+.singleContent h2,
+.singleContent h3 {
+    margin: 20px 0px;
+}
+
+.singleContent img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.singleContent pre {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.singleRightBar {
+    flex: 1
+}
+
+/* VIDEO CSS START */
+.video-container {
+    margin: 0 auto;           /* Centra el contenedor */
+    max-width: 720px;         /* Ancho máximo deseado */
+    width: 100%;              /* Ocupa el 100% del ancho disponible */
+    text-align: center;       /* Centra el contenido dentro del contenedor */
+    padding-top: 40px;        /* Padding superior */
+    padding-bottom: 0;        /* Sin padding inferior */
+}
+
+.video {
+    display: none; /* Hide all videos by default */
+}
+
+.video.active {
+    display: block; /* Only active video is visible */
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;     /* Mantiene la relación de aspecto 16:9 */
+    max-height: 405px;        /* Altura máxima para evitar que se vea demasiado alto */
+    border-radius: 10px;      /* Opcional: bordes redondeados */
+}
+
+/* Toggle button styling with animation */
+.toggle-video-btn {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-video-btn:hover {
+    background-color: var(--textSoft);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+
+.toggle-video-btn:active {
+    transform: scale(0.95);
+}
+
+/* VIDEO CSS END */
+
+/* SINGLE END */
+
+/* RIGHT BAR START */
+
+.rightBar{
+    position: sticky;
+    top: 100px;
+}
+
+.relatedPosts {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+}
+
+.relatedPosts h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.relatedPosts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.relatedPosts li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.relatedPosts li:last-child {
+    margin-bottom: 0;
+}
+
+.relatedPostImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.relatedPosts a {
+    text-decoration: none;
+    color: var(--textColor);
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    transition: color 0.2s ease-in-out;
+}
+
+.relatedPosts a:hover {
+    color: var(--textSoft);
+}
+
+/* RIGHT BAR END */
+
+/* ABOUT ME START */
+.about-me {
+    background-color: var(--bgSoft);
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin: 30px auto 50px auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .about-me-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .about-me-image img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  .about-me-content {
+    flex: 2;
+    min-width: 300px;
+    color: var(--text);
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  /* Botón para cambiar idioma, ubicado dentro de about-me-content */
+  .lang-toggle-container {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .lang-toggle-btn {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border: solid;
+    border-width: 1px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .lang-toggle-btn:hover {
+    background-color: var(--bg); /* Toma el color del fondo para mejor contraste */
+    color: var(--text);
+    transform: scale(1.05);
+    border: none;
+  }
+  
+  /* Espaciado de los párrafos y encabezados */
+  .about-me-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .about-me-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--textSoft);
+    margin-bottom: 30px;
+  }
+  
+  /* Redes sociales y CTA */
+  .about-me-social {
+    margin-top: 20px;
+  }
+  
+  .cta-email {
+    display: inline-block;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  .cta-email:hover {
+    background-color: var(--bgSoft);
+  }
+  
+  .social-links a {
+    margin-right: 15px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: var(--textSoft);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-me {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-me-content {
+      padding: 0;
+      text-align: center;
+    }
+    .about-me-content h1 {
+      font-size: 36px;
+    }
+    .about-me-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .lang-toggle-container {
+      text-align: center;
+    }
+  }  
+
+/* ABOUT ME END */
+
+/* Pantallas grandes (ya lo tienes bien definido)*/
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1366px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1080px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+/* **Tabletas (1024px y menores)** */
+@media (max-width: 1080px) {
+    .container {
+        max-width: 768px;
+        margin: 0px;
+    }
+
+    .singleBottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .singleContent {
+        flex: none;
+        width: 100%;
+    }
+
+    .singleRightBar {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* **Celulares grandes (768px y menores)** */
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+        margin: 0px;
+    }
+
+    .links {
+        font-size: 14px;
+    }
+
+    /* Ajuste del contenido de un post */
+    .singleHead {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .singleHeadImage {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .singleHeadTitle {
+        font-size: 36px;
+    }
+
+    .singleHeadDescription {
+        font-size: 18px;
+    }
+}
+
+/* **Celulares pequeños (640px y menores)** */
+@media (max-width: 640px) {
+    .container {
+        max-width: 475px;
+        margin: 0px;
+    }
+
+    /* Ajuste del navbar y el contenido */
+    .singleBottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .singleContent {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    /* Ajuste del sidebar */
+    .singleRightBar {
+        text-align: center;
+    }
+
+    /* Ajuste de la barra de navegación */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ajuste de los posts relacionados */
+    .relatedPosts ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .relatedPostImage {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* **Celulares muy pequeños (475px y menores)** */
+@media (max-width: 475px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .singleHeadTitle {
+        font-size: 28px;
+    }
+
+    .singleHeadDescription {
+        font-size: 16px;
+    }
+
+    .singleContent {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

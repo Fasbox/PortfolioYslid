@@ -1,0 +1,135 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // --- Desktop Search ---
+    var searchButton = document.querySelector(".navbar-desktop .searchButton");
+    if (searchButton) {
+      var searchInput = searchButton.querySelector(".searchInput");
+      var searchText = searchButton.querySelector("span");
+
+      searchButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (
+          searchInput.style.display === "none" ||
+          searchInput.style.display === ""
+        ) {
+          searchInput.style.display = "block";
+          searchInput.focus();
+          searchText.style.display = "none";
+        } else {
+          searchInput.style.display = "none";
+          searchText.style.display = "inline";
+          filterPosts("");
+        }
+      });
+
+      function filterPosts(query) {
+        var posts = document.querySelectorAll(".list .listItem");
+        posts.forEach(function (post) {
+          var titleElement = post.querySelector("h1 a");
+          var descElement = post.querySelector(".listItemDescription");
+          var titleText = titleElement
+            ? titleElement.textContent.toLowerCase()
+            : "";
+          var descText = descElement
+            ? descElement.textContent.toLowerCase()
+            : "";
+          if (
+            titleText.indexOf(query.toLowerCase()) !== -1 ||
+            descText.indexOf(query.toLowerCase()) !== -1
+          ) {
+            post.style.display = "flex";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      }
+
+      searchInput.addEventListener("keyup", function () {
+        filterPosts(searchInput.value);
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          searchInput.style.display === "block" &&
+          !searchButton.contains(event.target)
+        ) {
+          searchInput.style.display = "none";
+          searchText.style.display = "inline";
+          filterPosts("");
+        }
+      });
+    }
+
+    // --- Mobile Menu Toggle ---
+    var menuToggleBtn = document.getElementById("menu-toggle");
+    var mobileMenu = document.querySelector(".mobile-menu");
+    if (menuToggleBtn && mobileMenu) {
+      menuToggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("active");
+      });
+      document.addEventListener("click", function (e) {
+        if (
+          !mobileMenu.contains(e.target) &&
+          !menuToggleBtn.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("active");
+        }
+      });
+    }
+
+    // --- Mobile Search Overlay ---
+    var mobileSearchToggle = document.getElementById("search-toggle");
+    var mobileSearchOverlay = document.querySelector(".mobile-search-overlay");
+    var mobileSearchClose = document.getElementById("mobile-search-close");
+    var mobileSearchSubmit = document.getElementById("mobile-search-submit");
+    var mobileSearchInput = document.querySelector(".mobile-search-input");
+
+    if (mobileSearchToggle && mobileSearchOverlay) {
+      mobileSearchToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileSearchOverlay.style.display = "flex";
+        mobileSearchInput.focus();
+      });
+    }
+    if (mobileSearchClose && mobileSearchOverlay) {
+      mobileSearchClose.addEventListener("click", function () {
+        mobileSearchOverlay.style.display = "none";
+      });
+    }
+    document.addEventListener("click", function (e) {
+      if (
+        mobileSearchOverlay.style.display === "flex" &&
+        !mobileSearchOverlay.contains(e.target) &&
+        e.target !== mobileSearchToggle
+      ) {
+        mobileSearchOverlay.style.display = "none";
+      }
+    });
+    if (mobileSearchSubmit && mobileSearchInput) {
+      mobileSearchSubmit.addEventListener("click", function () {
+        filterPosts(mobileSearchInput.value);
+        mobileSearchOverlay.style.display = "none";
+      });
+    }
+
+    // --- VIDEO TOGGLE FUNCTIONALITY (si aplica) ---
+    function toggleVideo() {
+      let videoEn = document.getElementById("video-en");
+      let videoEs = document.getElementById("video-es");
+      let toggleButton = document.querySelector(".toggle-video-btn");
+      if (videoEn && videoEs && toggleButton) {
+        if (videoEn.classList.contains("active")) {
+          videoEn.classList.remove("active");
+          videoEs.classList.add("active");
+          toggleButton.textContent = "Cambiar a español";
+        } else {
+          videoEs.classList.remove("active");
+          videoEn.classList.add("active");
+          toggleButton.textContent = "Change to English";
+        }
+      }
+    }
+    window.toggleVideo = toggleVideo;
+  });
+</script>

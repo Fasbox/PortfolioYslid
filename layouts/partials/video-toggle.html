@@ -1,0 +1,17 @@
+<div class="video-container">
+  <button class="toggle-video-btn" onclick="toggleVideo()">
+    Cambiar a Español
+  </button>
+
+  <div id="video-es" class="video active">
+    <div class="video-wrapper">
+      {{ .Params.videoEs | printf "{{< youtube %s >}}" | markdownify }}
+    </div>
+  </div>
+
+  <div id="video-en" class="video">
+    <div class="video-wrapper">
+      {{ .Params.videoEn | printf "{{< youtube %s >}}" | markdownify }}
+    </div>
+  </div>
+</div>

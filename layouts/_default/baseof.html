@@ -3,21 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Archivos CSS modulares -->
     <link
       rel="stylesheet"
-      href='{{ "styles/style.css" | relURL }}?v={{ now.Unix
-    }}'
+      href='{{ "styles/aboutme.css" | relURL }}?v={{ now.Unix }}'
     />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/banner.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/categories.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/footer.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/list.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/navbar.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/single.css" | relURL }}?v={{ now.Unix }}'
+    />
+    <link
+      rel="stylesheet"
+      href='{{ "styles/style.css" | relURL }}?v={{ now.Unix }}'
+    />
+
+    <!-- Fuentes y favicon -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
+    <title>Yslid's Corner</title>
   </head>
   <body>
     <div class="container">
-      {{partial "navbar" . }} {{ block "main" . }} {{end}} {{partial "footer" .
-      }}
+      {{ partial "navbar" . }} {{ if .IsHome }} {{ partial "banner" . }} {{ end
+      }} {{ block "main" . }}{{ end }} {{ partial "footer" . }}
     </div>
+    {{ partial "custom-js.html" . }}
   </body>
 </html>

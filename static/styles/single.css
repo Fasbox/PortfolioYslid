@@ -1,0 +1,201 @@
+/* SINGLE START */
+
+.singleHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.singleHeadTexts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.singleHeadTitle {
+    font-size: 48px;
+}
+
+.singleHeadDescription {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.singleHeadDetail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.singleAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.singleCategory {
+    padding: 4px;
+    border-radius: 5px;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    font-size: 14px;
+}
+
+.singleHeadImage {
+    flex: 1;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.singleBottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.singleContent {
+    flex: 3;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.singleContent p,
+.singleContent h1,
+.singleContent h2,
+.singleContent h3 {
+    margin: 20px 0px;
+}
+
+.singleContent img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.singleContent pre {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.singleRightBar {
+    flex: 1
+}
+
+/* VIDEO CSS START */
+.video-container {
+    margin: 0 auto;           /* Centra el contenedor */
+    max-width: 720px;         /* Ancho máximo deseado */
+    width: 100%;              /* Ocupa el 100% del ancho disponible */
+    text-align: center;       /* Centra el contenido dentro del contenedor */
+    padding-top: 40px;        /* Padding superior */
+    padding-bottom: 0;        /* Sin padding inferior */
+}
+
+.video {
+    display: none; /* Hide all videos by default */
+}
+
+.video.active {
+    display: block; /* Only active video is visible */
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;     /* Mantiene la relación de aspecto 16:9 */
+    max-height: 405px;        /* Altura máxima para evitar que se vea demasiado alto */
+    border-radius: 10px;      /* Opcional: bordes redondeados */
+}
+
+/* Toggle button styling with animation */
+.toggle-video-btn {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-video-btn:hover {
+    background-color: var(--textSoft);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+
+.toggle-video-btn:active {
+    transform: scale(0.95);
+}
+
+/* VIDEO CSS END */
+
+/* SINGLE END */
+
+/* RIGHT BAR START */
+
+.rightBar{
+    position: sticky;
+    top: 100px;
+}
+
+.relatedPosts {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+}
+
+.relatedPosts h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.relatedPosts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.relatedPosts li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.relatedPosts li:last-child {
+    margin-bottom: 0;
+}
+
+.relatedPostImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.relatedPosts a {
+    text-decoration: none;
+    color: var(--textColor);
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    transition: color 0.2s ease-in-out;
+}
+
+.relatedPosts a:hover {
+    color: var(--textSoft);
+}
+
+/* RIGHT BAR END */

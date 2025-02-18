@@ -1,0 +1,23 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var langToggleBtn = document.getElementById("lang-toggle");
+    var aboutEs = document.querySelector(".about-es");
+    var aboutEn = document.querySelector(".about-en");
+
+    if (langToggleBtn && aboutEs && aboutEn) {
+      langToggleBtn.addEventListener("click", function () {
+        if (aboutEs.style.display !== "none") {
+          // Currently showing Spanish; switch to English.
+          aboutEs.style.display = "none";
+          aboutEn.style.display = "block";
+          langToggleBtn.textContent = "Cambiar a Español";
+        } else {
+          // Currently showing English; switch to Spanish.
+          aboutEn.style.display = "none";
+          aboutEs.style.display = "block";
+          langToggleBtn.textContent = "Change to English";
+        }
+      });
+    }
+  });
+</script>

@@ -1,10 +1,16 @@
-{{ define "main"}} {{ if eq .RelPermalink "/categories/"}} {{ range
-$.Site.Taxonomies.categories.ByCount }}
-<a href="/categories/{{ .Name }}">
-  # {{ .Name }} <small>({{.Count}})</small>
-</a>
-{{ end }} {{ else }}
-
+{{ define "main" }} {{ if eq .RelPermalink "/categories/" }}
+<div class="categories-container">
+  {{ range $.Site.Taxonomies.categories.ByCount }}
+  <div class="category-card">
+    <a href="/categories/{{ .Name | urlize }}">
+      <h2>{{ .Name }}</h2>
+      <span class="category-count">({{ .Count }})</span>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<!-- Aquí sigue el listado de posts (lo que ya tenías) -->
 <div class="list">
   {{ range .Paginator.Pages }}
   <div class="listItem">
@@ -15,9 +21,7 @@ $.Site.Taxonomies.categories.ByCount }}
       loading="lazy"
     />
     <div class="listItemTexts">
-      <h1>
-        <a href="{{.Permalink}}">{{.Title}}</a>
-      </h1>
+      <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
       <p class="listItemDescription">{{.Params.description}}</p>
       <div class="listItemDetail">
         <img
@@ -27,10 +31,10 @@ $.Site.Taxonomies.categories.ByCount }}
           class="listItemAvatar"
         />
         <span>
-          {{ range (.GetTerms "authors")}}
+          {{ range (.GetTerms "authors") }}
           <a href="{{.Permalink}}">{{ .Name }}</a>
-          {{ end }}</span
-        >
+          {{ end }}
+        </span>
         <time>{{ dateFormat .Site.Params.dateFormat .Date}}</time>
       </div>
       <div class="listItemCategories">

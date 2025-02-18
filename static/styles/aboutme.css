@@ -1,0 +1,129 @@
+/* ABOUT ME START */
+.about-me {
+    background-color: var(--bgSoft);
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin: 30px auto 50px auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .about-me-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .about-me-image img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  .about-me-content {
+    flex: 2;
+    min-width: 300px;
+    color: var(--text);
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  /* Botón para cambiar idioma, ubicado dentro de about-me-content */
+  .lang-toggle-container {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .lang-toggle-btn {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border: solid;
+    border-width: 1px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .lang-toggle-btn:hover {
+    background-color: var(--bg); /* Toma el color del fondo para mejor contraste */
+    color: var(--text);
+    transform: scale(1.05);
+    border: none;
+  }
+  
+  /* Espaciado de los párrafos y encabezados */
+  .about-me-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .about-me-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--textSoft);
+    margin-bottom: 30px;
+  }
+  
+  /* Redes sociales y CTA */
+  .about-me-social {
+    margin-top: 20px;
+  }
+  
+  .cta-email {
+    display: inline-block;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  .cta-email:hover {
+    background-color: var(--bgSoft);
+  }
+  
+  .social-links a {
+    margin-right: 15px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: var(--textSoft);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-me {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-me-content {
+      padding: 0;
+      text-align: center;
+    }
+    .about-me-content h1 {
+      font-size: 36px;
+    }
+    .about-me-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .lang-toggle-container {
+      text-align: center;
+    }
+  }  
+
+/* ABOUT ME END */

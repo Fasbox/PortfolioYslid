@@ -1,0 +1,40 @@
+/* CATEGORIES PAGE STYLES */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .category-card {
+    background-color: var(--bgSoft);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .category-card h2 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .category-card .category-count {
+    font-size: 16px;
+    color: var(--textSoft);
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+/* CATEGORIES END */

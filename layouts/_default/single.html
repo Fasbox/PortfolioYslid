@@ -2,33 +2,36 @@
 <div class="single">
   <div class="singleHead">
     <div class="singleHeadTexts">
-      <h1 class="singleHeadTitle">{{.Title}}</h1>
-      <p class="singleHeadDescription">{{.Params.description}}</p>
+      <h1 class="singleHeadTitle">{{ .Title }}</h1>
+      <p class="singleHeadDescription">{{ .Params.description }}</p>
       <div class="singleHeadDetail">
         <img
-          src="{{.Params.avatar}}"
+          src="{{ .Params.avatar }}"
           loading="lazy"
           alt=""
           class="singleAvatar"
         />
         <span
-          >{{ range (.GetTerms "authors")}}
-          <a href="{{.Permalink}}"> {{ .Name }}</a>
-          {{end}}
-        </span>
-        {{ range (.GetTerms "categories")}}
-        <a href="{{.Permalink}}" class="singleCategory"> {{ .Name }}</a>
-        {{end}}
-        <time> {{ dateFormat .Site.Params.dateFormat .Date }}</time>
+          >{{ range (.GetTerms "authors") }}
+          <a href="{{ .Permalink }}"> {{ .Name }}</a> {{ end }}</span
+        >
+        {{ range (.GetTerms "categories") }}
+        <a href="{{ .Permalink }}" class="singleCategory"> {{ .Name }}</a> {{
+        end }}
+        <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
       </div>
     </div>
     <img
-      src="{{.Params.imageBig}}"
-      alt="{{.Title}}"
-      srcset=""
+      src="{{ .Params.imageBig }}"
+      alt="{{ .Title }}"
       class="singleHeadImage"
     />
   </div>
+
+  {{/* Pass the extracted video IDs to the partial */}} {{ if and
+  .Params.videoEs .Params.videoEn }} {{ partial "video-toggle.html" . }} {{ end
+  }}
+
   <div class="singleBottom">
     <div class="singleContent">{{ .Content }}</div>
     <div class="singleRightBar">{{ partial "rightBar" . }}</div>
