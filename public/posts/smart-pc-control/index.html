@@ -178,8 +178,8 @@
 <div class="single">
   <div class="singleHead">
     <div class="singleHeadTexts">
-      <h1 class="singleHeadTitle">How I Made Alexa Power on My PC (And Connect From Anywhere)</h1>
-      <p class="singleHeadDescription"></p>
+      <h1 class="singleHeadTitle">Smart PC Control: Alexa &#43; Remote Access</h1>
+      <p class="singleHeadDescription">Ever wished you could turn on your PC with just your voice? I made Alexa do it—and set up secure remote access with RustDesk. Here’s how I pulled it off!</p>
       <div class="singleHeadDetail">
         <img
           src="/images/avatar.webp"
@@ -192,25 +192,124 @@
           <a href="http://localhost:1313/authors/yslid/"> Yslid</a> </span
         >
         
+        <a href="http://localhost:1313/categories/iot/" class="singleCategory"> IoT</a> 
+        <a href="http://localhost:1313/categories/diy-tech-hacks/" class="singleCategory"> DIY Tech Hacks</a> 
         <time>Feb 18, 2025</time>
       </div>
     </div>
     <img
-      src=""
-      alt="How I Made Alexa Power on My PC (And Connect From Anywhere)"
+      src="/ImagenesPosts/Thumbnail%20post1.svg"
+      alt="Smart PC Control: Alexa &#43; Remote Access"
       class="singleHeadImage"
     />
   </div>
 
-   
+    <div class="video-container">
+  <button class="toggle-video-btn" onclick="toggleVideo()">
+    Cambiar a Español
+  </button>
+
+  <div id="video-es" class="video active">
+    <div class="video-wrapper">
+      
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-AdjRO3UgW0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+    </div>
+  </div>
+
+  <div id="video-en" class="video">
+    <div class="video-wrapper">
+      
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/CvPtDd3B3PE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+ 
 
   <div class="singleBottom">
-    <div class="singleContent"></div>
+    <div class="singleContent"><h1 id="the-problem-wait-did-i-leave-my-pc-on">The Problem: &ldquo;Wait, Did I Leave My PC On?&rdquo;</h1>
+<p>You ever left home, halfway to wherever you&rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.</p>
+<p>I needed a way to turn it on remotely and access it securely, no matter where I was. That&rsquo;s when I went down the rabbit hole of <strong>Wake-on-LAN</strong>, <strong>RustDesk</strong>, and <strong>self-hosted setups</strong>—with some inspiration from NetworkChuck, of course.</p>
+<p>And let me tell you… It <strong>did not</strong> work on the first try.</p>
+<h2 id="step-1-making-alexa-turn-on-the-pc">Step 1: Making Alexa Turn On the PC</h2>
+<p>To make this happen, I used <strong>Wake-on-LAN via Alexa</strong> along with a few tweaks. Here’s how I got it working:</p>
+<ol>
+<li>
+<p><strong>Enable Wake-on-LAN on Windows</strong></p>
+<ul>
+<li>Go to BIOS and enable Wake-on-LAN (WOL).</li>
+<li>In Windows, enable WOL in your network adapter settings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Up a Wake-on-LAN Alexa Skill</strong></p>
+<ul>
+<li>I used <a href="https://example.com">Alexa Wake-on-LAN</a> (or the one you used).</li>
+<li>Linked it to my network and set up my PC&rsquo;s MAC address.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test It</strong></p>
+<ul>
+<li><em>This was the fun/frustrating part.</em></li>
+<li>Alexa just wouldn’t recognize the command at first. I triple-checked everything, no luck.</li>
+<li>Gave up, went to sleep, tried the next day, and boom—it worked. No idea why, but hey, I’m not complaining.</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-2-remote-access-with-rustdesk-self-hosted-of-course">Step 2: Remote Access with RustDesk (Self-Hosted, Of Course!)</h2>
+<p>Once I had Alexa waking up my PC, I needed a <strong>reliable</strong> and <strong>secure</strong> way to connect to it from my laptop (running Linux) to my Windows machine. My biggest challenge? Finding software that worked well across OSes.</p>
+<p>I decided to <strong>self-host RustDesk</strong>, inspired by NetworkChuck&rsquo;s approach:</p>
+<ol>
+<li>
+<p><strong>Set Up a RustDesk Server</strong></p>
+<ul>
+<li>Installed my own relay server to avoid third-party connections.</li>
+<li>Configured my Windows machine as a host.</li>
+<li>Installed RustDesk on my Linux laptop.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tested and Tweaked Security Settings</strong></p>
+<ul>
+<li>Configured strong passwords.</li>
+<li>Set up firewalls and network rules to lock things down.</li>
+</ul>
+</li>
+<li>
+<p><strong>Now I Can Access My PC from Anywhere</strong></p>
+<ul>
+<li>With just a voice command to Alexa and a RustDesk connection, I can remotely wake up and control my PC.</li>
+</ul>
+</li>
+</ol>
+<h2 id="final-thoughts-what-did-i-learn"><strong>Final Thoughts: What Did I Learn?</strong></h2>
+<ul>
+<li><strong>Persistence pays off.</strong> Sometimes, tech just starts working for no reason.</li>
+<li><strong>Self-hosting is worth it.</strong> RustDesk gives me control over my data.</li>
+<li><strong>Wake-on-LAN + Alexa = Super handy.</strong></li>
+</ul>
+</div>
     <div class="singleRightBar"><div class="relatedPosts">
   <h2>Posts Relacionados</h2>
 
+          
+  <ul>
       
-  <p>No hay posts relacionados.</p>
+  </ul>
   
 </div>
 </div>

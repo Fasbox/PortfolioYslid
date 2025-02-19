@@ -1,15 +1,15 @@
 +++
-date = '2025-02-18T23:01:48-05:00'
+date = '2025-02-18T22:41:17-05:00'
 draft = false
-title = 'How I Made Alexa Power On My PC (And Connect from Anywhere)'
+title = 'Smart PC Control: Alexa + Remote Access'
 description = "Ever wished you could turn on your PC with just your voice? I made Alexa do it—and set up secure remote access with RustDesk. Here’s how I pulled it off!"
-image = "/ImagenesPosts/Thumbnail post1.svg"
+image = "/ImagenesPosts/Thumbnail post1.1.svg"
 imageBig = "/ImagenesPosts/Thumbnail post1.svg"
 categories = ["IoT", "DIY Tech Hacks"]
 authors = ["Yslid"]
 avatar = "/images/avatar.webp"
-videoEs = ""
-videoEn = ""
+videoEs = "-AdjRO3UgW0"
+videoEn = "CvPtDd3B3PE"
 +++
 
 # The Problem: "Wait, Did I Leave My PC On?"
