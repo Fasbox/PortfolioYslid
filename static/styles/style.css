@@ -1,19 +1,27 @@
 :root {
-    --bg: #0c1e2d;        /* Un azul marino muy oscuro */
-    --bgSoft: #1c3a55;    /* Un azul oscuro un poco más claro para fondos suaves */
-    --text: #e5eff5;      /* Un tono claro, casi blanco con matiz azul */
-    --textSoft: #ccd7dc;  /* Un gris azulado suave para textos secundarios */
-  }
+    --bg: #0c1e2d;        /* Azul marino oscuro */
+    --bgSoft: #1c3a55;    /* Azul oscuro más claro */
+    --text: #e5eff5;      /* Blanco azulado */
+    --textSoft: #ccd7dc;  /* Gris azulado para texto secundario */
+
+    /* Variables de anchura */
+    --max-width-large: 1366px;
+    --max-width-medium: 1280px;
+    --max-width-tablet: 1024px;
+    --max-width-mobile-large: 768px;
+    --max-width-mobile: 640px;
+    --max-width-mobile-small: 475px;
+}
 
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Lato', regular;
+    font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -32,19 +40,25 @@ a {
     justify-content: space-between;
 }
 
-/* Pantallas grandes (ya lo tienes bien definido)*/
+/* ================ 
+   📌 BREAKPOINTS 
+   ================ */
+
+/* 🖥 Pantallas grandes (1536px y menores) */
 @media (max-width: 1536px) {
     .container {
-        max-width: 1366px;
+        max-width: var(--max-width-large);
     }
 }
 
+/* 💻 Laptops (1366px y menores) */
 @media (max-width: 1366px) {
     .container {
-        max-width: 1280px;
+        max-width: var(--max-width-medium);
     }
 }
 
+/* 🖥 Laptops más pequeños (1280px y menores) */
 @media (max-width: 1280px) {
     .container {
         max-width: 1080px;
@@ -53,125 +67,33 @@ a {
     }
 }
 
-/* **Tabletas (1024px y menores)** */
-@media (max-width: 1080px) {
+/* 📲 Tabletas (1024px y menores) */
+@media (max-width: 1024px) {
     .container {
-        max-width: 768px;
-        margin: 0px;
-    }
-
-    .singleBottom {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .singleContent {
-        flex: none;
-        width: 100%;
-    }
-
-    .singleRightBar {
-        flex: none;
-        width: 100%;
+        max-width: var(--max-width-tablet);
+        margin: 0;
     }
 }
 
-/* **Celulares grandes (768px y menores)** */
+/* 📱 Celulares grandes (768px y menores) */
 @media (max-width: 768px) {
     .container {
-        max-width: 640px;
-        margin: 0px;
-    }
-
-    .links {
-        font-size: 14px;
-    }
-
-    /* Ajuste del contenido de un post */
-    .singleHead {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .singleHeadImage {
-        width: 100%;
-        max-height: 250px;
-    }
-
-    .singleHeadTitle {
-        font-size: 36px;
-    }
-
-    .singleHeadDescription {
-        font-size: 18px;
+        max-width: var(--max-width-mobile-large);
     }
 }
 
-/* **Celulares pequeños (640px y menores)** */
+/* 📱 Celulares medianos (640px y menores) */
 @media (max-width: 640px) {
     .container {
-        max-width: 475px;
-        margin: 0px;
-    }
-
-    /* Ajuste del navbar y el contenido */
-    .singleBottom {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .singleContent {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    /* Ajuste del sidebar */
-    .singleRightBar {
-        text-align: center;
-    }
-
-    /* Ajuste de la barra de navegación */
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    /* Ajuste de los posts relacionados */
-    .relatedPosts ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .relatedPostImage {
-        width: 80px;
-        height: 80px;
+        max-width: var(--max-width-mobile);
     }
 }
 
-/* **Celulares muy pequeños (475px y menores)** */
+/* 📱 Celulares pequeños (475px y menores) */
 @media (max-width: 475px) {
     .container {
-        max-width: 100%;
-        padding: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .singleHeadTitle {
-        font-size: 28px;
-    }
-
-    .singleHeadDescription {
-        font-size: 16px;
-    }
-
-    .singleContent {
-        font-size: 16px;
-        line-height: 24px;
+        max-width: var(--max-width-mobile-small);
+        padding: 0px;
+        margin: 0 20px;
     }
 }

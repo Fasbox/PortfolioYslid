@@ -1,14 +1,119 @@
-/* FOOTER START */
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    font-size: 14;
+/* ===========================
+   FOOTER MODERNO Y RESPONSIVE
+   =========================== */
+   .footer {
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-top: 30px;
 }
 
-.social {
+/* Contenedor flexible para los elementos principales */
+.footer-container {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
 }
-/* FOOTER END*/
+
+/* LOGO Y DESCRIPCIÓN */
+.footer-brand {
+    flex: 1;
+    text-align: left;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-description {
+    font-size: 14px;
+    margin-top: 5px;
+    color: var(--textSoft);
+}
+
+/* LINKS */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--textSoft);
+}
+
+/* REDES SOCIALES */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    min-width: 200px;
+    justify-content: right;
+}
+
+.social-link svg {
+    fill: var(--text);
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* DERECHOS RESERVADOS */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--textSoft);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+/* Tabletas */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-brand, .footer-links, .footer-social {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+    .footer {
+        padding: 30px 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

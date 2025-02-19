@@ -1,38 +1,60 @@
-/*  NAVBAR BASE  */
-.navbar {
+/* ==============================
+   NAVBAR ESTILOS GENERALES
+   ============================== */
+   .navbar {
     position: sticky;
     top: 0;
     background-color: var(--bg);
     z-index: 1000;
     display: flex;
     flex-direction: column;
-  }
+    width: 100%;
+}
 
-  .navbar-mobile {
+/* Ocultar navbar móvil por defecto */
+.navbar-mobile {
     display: none;
-  }
-  
-  /* Desktop Navbar (se mantiene igual) */
-  .navbar-desktop {
+}
+
+/* ==============================
+   NAVBAR DESKTOP (PC y Laptop)
+   ============================== */
+   .navbar-desktop {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding: 0 20px;
-  }
-  .navbar-desktop .logo a {
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .navbar-desktop .links {
+    justify-content: space-between; /* Asegura que los extremos se mantengan */
+    height: 80px;
+    padding: 0 0;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Mantener el logo completamente a la izquierda */
+.navbar-desktop .logo a {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Mantener los links y la búsqueda alineados a la derecha */
+.navbar-desktop .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ajustar los links */
+.navbar-desktop .links {
     display: flex;
     align-items: center;
     gap: 20px;
     font-size: 16px;
-  }
-  .navbar-desktop .searchButton {
+}
+
+/* Ajustar el botón de búsqueda */
+.navbar-desktop .searchButton {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -41,138 +63,161 @@
     border-radius: 10px;
     padding: 4px 8px;
     cursor: pointer;
-  }
-  .navbar-desktop .searchInput {
+}
+
+/* Ajustar la caja de búsqueda */
+.navbar-desktop .searchInput {
     background-color: transparent;
     border: none;
     outline: none;
     color: var(--textSoft);
     font-size: 16px;
     width: 150px;
-    display: none;
-  }
-  
-  /* =======================
-     MOBILE NAVBAR
-     ======================= */
-     @media (max-width: 768px) {
-        /* Oculta el desktop */
-        .navbar-desktop {
-          display: none;
-        }
-        
-        /* Mobile Navbar: sticky con offset */
-        .navbar-mobile {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          height: 70px;
-          padding: 0 15px;
-          background-color: var(--bg);
-          position: sticky;
-          top: 10px;  /* Espacio desde el top al hacer scroll */
-          z-index: 1000;
-          /* Aseguramos que sea el contenedor relativo para el mobile-menu */
-          position: relative;
-        }
-        
-        /* Dividir el navbar móvil en 3 secciones */
-        .navbar-mobile .mobile-left,
-        .navbar-mobile .mobile-center,
-        .navbar-mobile .mobile-right {
-          flex: 1;
-        }
-        .navbar-mobile .mobile-left {
-          text-align: left;
-        }
-        .navbar-mobile .mobile-center {
-          text-align: center;
-        }
-        .navbar-mobile .mobile-right {
-          text-align: right;
-        }
-        
-        /* Logo en móvil */
-        .navbar-mobile .logo a {
-          font-weight: bold;
-          font-size: 20px;
-          color: var(--text);
-          text-decoration: none;
-        }
-        
-        /* Botón hamburger */
-        .menu-toggle-btn {
-          background: none;
-          border: none;
-          cursor: pointer;
-        }
-        .menu-toggle-btn svg rect {
-          fill: white;
-        }
-        
-        /* Ícono de búsqueda en móvil: solo el ícono con borde blanco de 1px */
-        .search-icon {
-          background: none;
-          border: 1px solid white;
-          padding: 5px;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        .navbar-mobile .search-icon svg path {
-          fill: white !important;
-        }
-        
-        /* Mobile Menu (desplegable): se posiciona debajo del navbar-mobile */
-        .mobile-menu {
-          display: none;
-          flex-direction: column;
-          background-color: var(--bg);
-          padding: 15px;
-          gap: 20px;
-          align-items: flex-start;
-          width: 100%;
-          position: absolute;
-          top: 70px;
-          left: 0;
-          z-index: 999;
-        }
-        .mobile-menu.active {
-          display: flex !important;
-        }
-        
-        /* Mobile Search Overlay */
-        .mobile-search-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
-          display: none;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 2000;
-        }
-        .mobile-search-input {
-          width: 80%;
-          max-width: 400px;
-          padding: 10px;
-          font-size: 16px;
-          border: 1px solid var(--bgSoft);
-          border-radius: 8px;
-          margin-bottom: 20px;
-        }
-        .mobile-search-submit,
-        .mobile-search-close {
-          padding: 10px 20px;
-          border: none;
-          background-color: var(--bgSoft);
-          color: var(--text);
-          border-radius: 8px;
-          cursor: pointer;
-          margin: 5px;
-        }
-      }
-/* NAVBAR END */
+    display: none; /* Oculto por defecto */
+}
+
+/* Hacer visible la caja de búsqueda en hover */
+.navbar-desktop .searchButton:hover .searchInput {
+    display: inline-block;
+}
+
+/* ==============================
+   NAVBAR RESPONSIVE (MÓVIL Y TABLET)
+   ============================== */
+@media (max-width: 1024px) {
+    /* Ocultamos el navbar de PC */
+    .navbar-desktop {
+        display: none;
+    }
+
+    /* Mostramos el navbar móvil */
+    .navbar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        padding: 0 15px;
+        background-color: var(--bg);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Dividimos el navbar en 3 secciones */
+    .navbar-mobile .mobile-left,
+    .navbar-mobile .mobile-center,
+    .navbar-mobile .mobile-right {
+        flex: 1;
+    }
+
+    .navbar-mobile .mobile-left {
+        text-align: left;
+    }
+
+    .navbar-mobile .mobile-center {
+        text-align: center;
+    }
+
+    .navbar-mobile .mobile-right {
+        text-align: right;
+    }
+
+    /* Logo en móvil */
+    .navbar-mobile .logo a {
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    /* Menú hamburguesa */
+    .menu-toggle-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle-btn svg rect {
+        fill: white;
+    }
+
+    /* Ícono de búsqueda en móvil */
+    .search-icon {
+        background: none;
+        border: 1px solid white;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .navbar-mobile .search-icon svg path {
+        fill: white !important;
+    }
+
+    /* Menú desplegable en móvil */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bgSoft);
+        padding: 15px;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu.active {
+        display: flex !important;
+    }
+
+    /* Mejor tamaño del input de búsqueda en móvil */
+    .mobile-search-input {
+        width: 90%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid var(--bgSoft);
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Botones de búsqueda en móvil */
+    .mobile-search-submit,
+    .mobile-search-close {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--bgSoft);
+        color: var(--text);
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 5px;
+    }
+}
+
+/* ==============================
+   AJUSTES PARA CELULARES PEQUEÑOS (max-width: 640px)
+   ============================== */
+@media (max-width: 640px) {
+    .navbar-mobile {
+        padding: 0 0;
+    }
+
+    .navbar-mobile .logo a {
+        font-size: 18px;
+    }
+
+    .menu-toggle-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .search-icon {
+        padding: 3px;
+    }
+}

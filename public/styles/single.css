@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Permite reorganizar en pantallas más pequeñas */
 }
 
 .singleHeadTexts {
@@ -44,10 +45,14 @@
     font-size: 14px;
 }
 
+/* 📌 SINGLE HEAD IMAGE */
 .singleHeadImage {
     flex: 1;
+    max-width: 600px;
     max-height: 350px;
     object-fit: cover;
+    border-radius: 10px;
+    transition: max-width 0.3s ease;
 }
 
 .singleBottom {
@@ -199,3 +204,141 @@
 }
 
 /* RIGHT BAR END */
+
+/* RESPONSIVE START */
+
+/* ===========================
+   🖥️ RESPONSIVE - MONITORES DE 1280PX O MENORES
+   =========================== */
+   @media (max-width: 1280px) {
+    .singleHead {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .singleHeadImage {
+        max-width: 90%;
+        height: auto;
+        max-height: 320px;
+        order: -1; /* Mueve la imagen arriba del título */
+    }
+
+    .singleHeadTitle {
+        font-size: 42px;
+    }
+
+    .singleHeadDescription {
+        font-size: 18px;
+    }
+
+    .singleHeadDetail {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .singleBottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .singleContent {
+        flex: none;
+        width: 100%;
+    }
+
+    .singleRightBar {
+        flex: none;
+        width: 100%; /* Ocupará todo el ancho */
+    }
+
+    .relatedPosts {
+        width: 100%;
+    }
+}
+
+/* **Celulares grandes (768px y menores)** */
+@media (max-width: 768px) {
+    .singleHead {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .singleHeadImage {
+        max-width: 100%;
+        height: auto;
+        max-height: 280px;
+        border-radius: 8px;
+    }
+
+    .singleHeadTitle {
+        font-size: 36px;
+    }
+
+    .singleHeadDescription {
+        font-size: 17px;
+    }
+
+    .singleContent {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+/* **Celulares pequeños (640px y menores)** */
+@media (max-width: 640px) {
+    .singleBottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .singleContent {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+/* **Celulares muy pequeños (475px y menores)** */
+@media (max-width: 475px) {
+    .singleHead {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .singleHeadImage {
+        max-width: 100%;
+        max-height: 250px;
+        border-radius: 6px;
+    }
+
+    .singleHeadTitle {
+        font-size: 28px;
+    }
+
+    .singleHeadDescription {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .singleHead {
+        text-align: center;
+    }
+
+    .singleHeadImage {
+        max-width: 100%;
+        max-height: 220px;
+    }
+
+    .singleHeadTitle {
+        font-size: 24px;
+    }
+
+    .singleHeadDescription {
+        font-size: 14px;
+    }
+}

@@ -8,16 +8,15 @@ imageBig = "/ImagenesPosts/WIN_20240328_21_51_10_Pro.jpg"
 categories = ["prueba"]
 authors = ["Yslid"]
 avatar = "/images/avatar.webp"
-videoEs = ""
-videoEn = ""
+videoEs = "-AdjRO3UgW0"
+videoEn = "CvPtDd3B3PE"
 +++
 
 ## Pendientes app:
-
-- Organizar el responsive de home, pensar bien en los breakpoints de todos los dispositivos
-
-- Organizar links del footer
-
-- Crear el primer post de verdad - Pensar/Grabar videos
+- Crear 4 posts con video
+  - Post sobre como prender el computador con alexa
+  - Post sobre el desarrollo del blog
+  - Post sobre la charla de ciberseguridad dada en la U
+  - Post sobre power automate
 
 - Crear logo

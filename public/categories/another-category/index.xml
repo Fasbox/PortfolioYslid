@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Another-Category on Yslids Blog</title>
+    <link>http://localhost:1313/categories/another-category/</link>
+    <description>Recent content in Another-Category on Yslids Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Feb 2025 20:37:37 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/another-category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Try 2</title>
+      <link>http://localhost:1313/posts/try-2/</link>
+      <pubDate>Thu, 06 Feb 2025 20:37:37 -0500</pubDate>
+      <guid>http://localhost:1313/posts/try-2/</guid>
+      <description>&lt;h1 id=&#34;texto-de-ensayo&#34;&gt;texto de ensayo&lt;/h1&gt;&#xA;&lt;p&gt;Acá estoy probando el texto con los post y videos a la vez&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

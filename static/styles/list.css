@@ -8,139 +8,187 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     padding: 0 !important; /* Sin padding en todo momento */
-  }
-  
-  .listItem {
+}
+
+.listItem {
     display: flex;
     align-items: center;
     gap: 50px;
     border: 2px solid var(--bgSoft);
     border-radius: 15px;
     padding: 20px;
-  }
-  
-  .listItemImage {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.listItemImage {
     width: 200px;
     height: 200px;
     border-radius: 15px;
     object-fit: cover;
     object-position: center;
-  }
-  
-  .listItemTexts {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.listItemTexts {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  .listItemDetail {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+    overflow: hidden;
+}
+
+.listItemDescription {
+    max-height: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+}
+
+.listItemDetail {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 14px;
-  }
-  
-  .listItemAvatar {
+}
+
+.listItemAvatar {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
-  }
-  
-  .listItemCategories {
+}
+
+.listItemCategories {
     display: flex;
     gap: 10px;
-  }
-  
-  .listItemCategory {
+}
+
+.listItemCategory {
     padding: 5px;
     border-radius: 5px;
     background-color: var(--bgSoft);
     color: var(--textSoft);
     font-size: 14px;
-  }
-  
-  /* =========================
-     RESPONSIVE PARA CELULARES (max-width: 767px)
-     ========================= */
-  @media (max-width: 767px) {
-    .list {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    .listItem {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-      max-height: 500px;
-      overflow: hidden;
-    }
-    .listItemImage {
-      width: 100%;
-      max-height: 200px;
-      height: auto;
-    }
-    .listItemTexts {
-      justify-content: center;
-      text-align: center;
-    }
-    .listItemDetail,
-    .listItemCategories {
-      justify-content: center;
-    }
-    .listItemDescription {
-      max-height: 115px;
-      overflow: hidden;
-    }
-  }
-  
+}
+
 /* =========================
-   RESPONSIVE PARA PANTALLAS ENTRE 1200px Y 1538px
+   RESPONSIVE PARA TABLETS GRANDES (1024px - 1280px)
    ========================= */
-   @media (min-width: 1200px) and (max-width: 1538px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     .list {
-        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas */
-        gap: 30px; /* Espacio entre los posts */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
     .listItem {
         display: flex;
-        flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+        flex-direction: row; /* Imagen a la izquierda */
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        max-height: 280px;
+    }
+
+    .listItemImage {
+        width: 160px;
+        height: 160px;
+    }
+
+    .listItemTexts {
+        font-size: 0.95em;
+        max-width: 65%; /* Limita el ancho del texto */
+    }
+
+    .listItemDescription {
+        max-height: 100px;
+        -webkit-line-clamp: 3; /* Máximo 3 líneas */
+    }
+
+    .listItemDetail {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   RESPONSIVE PARA CELULARES (max-width: 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+    .list {
+        grid-template-columns: 1fr; /* Cambia a 1 columna */
+        gap: 30px;
+    }
+
+    .listItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        max-height: 500px;
+    }
+
+    .listItemImage {
+        width: 100%;
+        max-height: 200px;
+    }
+
+    .listItemTexts {
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .listItemDetail,
+    .listItemCategories {
+        justify-content: center;
+    }
+
+    .listItemDescription {
+        max-height: 115px;
+        -webkit-line-clamp: 4;
+    }
+}
+
+/* =========================
+   RESPONSIVE PARA PANTALLAS ENTRE 1200px Y 1538px
+   ========================= */
+@media (min-width: 1200px) and (max-width: 1538px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas */
+        gap: 30px;
+    }
+
+    .listItem {
+        display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 25px;
         padding: 20px;
         border-radius: 12px;
-        max-height: 300px; /* Se ajusta la altura */
-        overflow: hidden;
+        max-height: 300px;
     }
 
     .listItemImage {
-        width: 180px; /* Imagen más grande */
+        width: 180px;
         height: 180px;
-        object-fit: cover;
-        border-radius: 12px;
     }
 
     .listItemTexts {
-        text-align: left;
         font-size: 1em;
-        max-width: 65%; /* Limitar ancho del texto */
-        overflow: hidden;
+        max-width: 65%;
     }
 
     .listItemDescription {
-        max-height: 120px; /* Permitir más contenido visible */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4; /* Máximo de 4 líneas */
-        -webkit-box-orient: vertical;
+        max-height: 120px;
+        -webkit-line-clamp: 4;
     }
 
     .listItemDetail {
-        display: flex;
-        align-items: center;
-        gap: 10px;
         font-size: 14px;
     }
 
@@ -153,19 +201,14 @@
     .listItemAvatar {
         width: 24px;
         height: 24px;
-        border-radius: 50%;
     }
 }
-  
-  /* =========================
-     RESPONSIVE PARA PANTALLAS MAYORES A 1538px
-     ========================= */
-  @media (min-width: 1538px) {
-    .list {
-      grid-template-columns: repeat(2, 1fr); /* O puedes usar 3 si prefieres */
-    }
-    /* Los estilos base se aplican, es decir, sin reducción */
-  }
-  
 
-/* LIST END */
+/* =========================
+   RESPONSIVE PARA PANTALLAS MAYORES A 1538px
+   ========================= */
+@media (min-width: 1538px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

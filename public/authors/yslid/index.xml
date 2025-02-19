@@ -6,21 +6,28 @@
     <description>Recent content in Yslid on Yslids Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Feb 2025 22:19:51 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 23:36:10 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/authors/yslid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pendientes Blog</title>
+      <link>http://localhost:1313/posts/pendientes-app/</link>
+      <pubDate>Mon, 17 Feb 2025 23:36:10 -0500</pubDate>
+      <guid>http://localhost:1313/posts/pendientes-app/</guid>
+      <description>&lt;h2 id=&#34;pendientes-app&#34;&gt;Pendientes app:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Crear 4 posts con video&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Post sobre como prender el computador con alexa&lt;/li&gt;&#xA;&lt;li&gt;Post sobre el desarrollo del blog&lt;/li&gt;&#xA;&lt;li&gt;Post sobre la charla de ciberseguridad dada en la U&lt;/li&gt;&#xA;&lt;li&gt;Post sobre power automate&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Crear logo&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Pendientes del blog</title>
       <link>http://localhost:1313/posts/prueba-mam%C3%A1/</link>
       <pubDate>Thu, 06 Feb 2025 22:19:51 -0500</pubDate>
       <guid>http://localhost:1313/posts/prueba-mam%C3%A1/</guid>
-      <description>&lt;h2 id=&#34;pendientes-app&#34;&gt;Pendientes app:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Organizar el responsive de home&lt;/li&gt;&#xA;&lt;li&gt;Organizar links del footer&lt;/li&gt;&#xA;&lt;li&gt;Crear el primer post de verdad - Pensar/Grabar videos&lt;/li&gt;&#xA;&lt;li&gt;Crear logo&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 id=&#34;pendientes-app&#34;&gt;Pendientes app:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Organizar el responsive de home, pensar bien en los breakpoints de todos los dispositivos&lt;/li&gt;&#xA;&lt;li&gt;Organizar links del footer&lt;/li&gt;&#xA;&lt;li&gt;Crear el primer post de verdad - Pensar/Grabar videos&lt;/li&gt;&#xA;&lt;li&gt;Crear logo&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Try 2</title>
       <link>http://localhost:1313/posts/try-2/</link>
       <pubDate>Thu, 06 Feb 2025 20:37:37 -0500</pubDate>
       <guid>http://localhost:1313/posts/try-2/</guid>
-      <description>&lt;h1 id=&#34;bienvenido&#34;&gt;Bienvenido&lt;/h1&gt;&#xA;&lt;p&gt;hola soy Fabián&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;youtube-videos&#34;&gt;YouTube Videos&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spanish Video:&lt;/strong&gt;&#xA;videoEs: &amp;ldquo;-AdjRO3UgW0&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;English Video:&lt;/strong&gt;&#xA;videoEs: &amp;ldquo;-AdjRO3UgW0&amp;rdquo;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;Prueba de videos&lt;/p&gt;&#xA;&lt;p&gt;#cibersec #network&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;texto-de-ensayo&#34;&gt;texto de ensayo&lt;/h1&gt;&#xA;&lt;p&gt;Acá estoy probando el texto con los post y videos a la vez&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post as a try</title>
