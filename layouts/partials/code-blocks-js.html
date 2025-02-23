@@ -1,0 +1,28 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const preElements = document.querySelectorAll(".singleContent pre");
+
+    preElements.forEach((pre) => {
+      // Crear botón de copiar
+      const copyButton = document.createElement("button");
+      copyButton.classList.add("copy-button");
+      copyButton.innerText = "Copy";
+
+      // Insertar botón antes del código dentro del <pre>
+      pre.insertBefore(copyButton, pre.firstChild);
+
+      // Evento de copia
+      copyButton.addEventListener("click", function () {
+        const codeBlock = pre.querySelector("code") || pre;
+        const text = codeBlock.innerText;
+
+        navigator.clipboard.writeText(text).then(() => {
+          copyButton.innerText = "Copied!";
+          setTimeout(() => {
+            copyButton.innerText = "Copy";
+          }, 1500);
+        });
+      });
+    });
+  });
+</script>

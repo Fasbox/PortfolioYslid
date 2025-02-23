@@ -101,24 +101,38 @@
     color: var(--text); /* 🔹 Cambia de color al pasar el mouse */
 }
 
-.singleContent pre {
-    width: 100%;
-    background-color: var(--bgSoft); /* 🔹 Fondo diferenciado */
+/* CODE START */
+.singleContent .highlight {
+    background-color: var(--bgSoft); /* 🔹 Fondo oscuro para el bloque de código */
     border-radius: 10px;
     padding: 15px;
-    overflow: hidden; /* 🔹 Oculta la barra de desplazamiento horizontal */
-    position: relative; /* 🔹 Necesario para el botón */
+    overflow-x: auto; /* 🔹 Permite scroll horizontal si es necesario */
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 100%;
+    border: 1px solid var(--textSoft);
 }
 
-.singleContent code {
-    font-family: 'Courier New', monospace;
-    color: var(--text);
-    display: block;
-    white-space: pre-wrap; /* 🔹 Permite que el texto se ajuste sin barra */
+/* Aplica los estilos al pre dentro de .highlight */
+.singleContent .highlight pre {
+    background: none; /* 🔹 Elimina el fondo extra del <pre> */
+    border: none; /* 🔹 Evita bordes dobles */
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    white-space: pre-wrap; /* 🔹 Ajusta el código automáticamente */
     word-wrap: break-word;
 }
 
-/* 📌 BOTÓN DE COPIAR EN CÓDIGO */
+/* 🔹 Mejora la visibilidad del código */
+.singleContent .highlight code {
+    font-family: 'Courier New', monospace;
+    color: var(--text);
+    display: block;
+}
+
+/* 📌 BOTÓN DE COPIAR CÓDIGO */
 .copy-button {
     position: absolute;
     top: 10px;
@@ -131,17 +145,35 @@
     border-radius: 5px;
     cursor: pointer;
     display: none; /* 🔹 Oculto por defecto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* 🔹 Aparece el botón solo cuando se hace hover */
-.singleContent pre:hover .copy-button {
+/* 🔹 Aparece solo cuando se hace hover sobre el bloque de código */
+.singleContent .highlight:hover .copy-button {
     display: block;
 }
 
-/* 🔹 Animación de clic */
+/* 🔹 Animación al presionar el botón */
 .copy-button:active {
     transform: scale(0.95);
 }
+
+/* 🎨 Personaliza el scrollbar del código */
+.singleContent .highlight pre::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.singleContent .highlight pre::-webkit-scrollbar-thumb {
+    background: var(--textSoft);
+    border-radius: 5px;
+}
+
+.singleContent .highlight pre::-webkit-scrollbar-thumb:hover {
+    background: var(--text);
+}
+/* CODE END */
+
 
 .singleContent img {
     width: 100%;

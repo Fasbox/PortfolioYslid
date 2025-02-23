@@ -7,35 +7,35 @@
     
     <link
       rel="stylesheet"
-      href='/styles/aboutme.css?v=1740346756'
+      href='/styles/aboutme.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/banner.css?v=1740346756'
+      href='/styles/banner.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/categories.css?v=1740346756'
+      href='/styles/categories.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/footer.css?v=1740346756'
+      href='/styles/footer.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/list.css?v=1740346756'
+      href='/styles/list.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/navbar.css?v=1740346756'
+      href='/styles/navbar.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/single.css?v=1740346756'
+      href='/styles/single.css?v=1740349413'
     />
     <link
       rel="stylesheet"
-      href='/styles/style.css?v=1740346756'
+      href='/styles/style.css?v=1740349413'
     />
 
     
@@ -267,7 +267,35 @@
 </div>
   </div>
 </div>
- <footer class="footer">
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const preElements = document.querySelectorAll(".singleContent pre");
+
+    preElements.forEach((pre) => {
+      
+      const copyButton = document.createElement("button");
+      copyButton.classList.add("copy-button");
+      copyButton.innerText = "Copy";
+
+      
+      pre.insertBefore(copyButton, pre.firstChild);
+
+      
+      copyButton.addEventListener("click", function () {
+        const codeBlock = pre.querySelector("code") || pre;
+        const text = codeBlock.innerText;
+
+        navigator.clipboard.writeText(text).then(() => {
+          copyButton.innerText = "Copied!";
+          setTimeout(() => {
+            copyButton.innerText = "Copy";
+          }, 1500);
+        });
+      });
+    });
+  });
+</script>
+  <footer class="footer">
   <div class="footer-container">
     
     <div class="footer-brand">
