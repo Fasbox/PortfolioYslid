@@ -3,24 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-02-17T23:36:10-05:00</lastmod>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-17T23:36:10-05:00</lastmod>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/diy-tech-hacks/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/how-i-made-alexa-power-on-my-pc-and-connect-from-anywhere/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/iot/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/yslid/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-02-18T23:01:48-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/smart-pc-control/</loc>
+    <lastmod>2025-02-18T22:41:17-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/pendientes-app/</loc>
     <lastmod>2025-02-17T23:36:10-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-02-17T23:36:10-05:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/prueba/</loc>
-    <lastmod>2025-02-17T23:36:10-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/yslid/</loc>
-    <lastmod>2025-02-17T23:36:10-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-02-17T23:36:10-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/prueba-mam%C3%A1/</loc>
