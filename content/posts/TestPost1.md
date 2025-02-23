@@ -10,8 +10,5 @@ authors = ["Yslid"]
 avatar = "/images/avatar.webp"
 +++
 
-## Pendientes app:
-- Organizar el responsive de home, pensar bien en los breakpoints de todos los dispositivos
-- Organizar links del footer
-- Crear el primer post de verdad - Pensar/Grabar videos
-- Crear logo
+## Hi
+my name is fabian

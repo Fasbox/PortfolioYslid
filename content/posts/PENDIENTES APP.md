@@ -14,7 +14,7 @@ videoEn = "CvPtDd3B3PE"
 
 ## Pendientes app:
 - Crear 4 posts con video
-  - Post sobre como prender el computador con alexa
+  - Post sobre como prender el computador con alexa (faltan los videos)
   - Post sobre el desarrollo del blog
   - Post sobre la charla de ciberseguridad dada en la U
   - Post sobre power automate
