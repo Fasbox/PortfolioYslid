@@ -7,35 +7,35 @@
     
     <link
       rel="stylesheet"
-      href='/styles/aboutme.css?v=1740342986'
+      href='/styles/aboutme.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/banner.css?v=1740342986'
+      href='/styles/banner.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/categories.css?v=1740342986'
+      href='/styles/categories.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/footer.css?v=1740342986'
+      href='/styles/footer.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/list.css?v=1740342986'
+      href='/styles/list.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/navbar.css?v=1740342986'
+      href='/styles/navbar.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/single.css?v=1740342986'
+      href='/styles/single.css?v=1740344996'
     />
     <link
       rel="stylesheet"
-      href='/styles/style.css?v=1740342986'
+      href='/styles/style.css?v=1740344996'
     />
 
     
@@ -178,8 +178,8 @@
 <div class="single">
   <div class="singleHead">
     <div class="singleHeadTexts">
-      <h1 class="singleHeadTitle">Smart PC Control Alexa &#43; Remote Access</h1>
-      <p class="singleHeadDescription"></p>
+      <h1 class="singleHeadTitle">How I Made Alexa Power On My PC (And Connect from Anywhere)</h1>
+      <p class="singleHeadDescription">Ever wished you could turn on your PC with just your voice? I made Alexa do it—and set up secure remote access with RustDesk. Here’s how I pulled it off!</p>
       <div class="singleHeadDetail">
         <img
           src="/images/avatar.webp"
@@ -192,12 +192,14 @@
           <a href="http://localhost:1313/authors/yslid/"> Yslid</a> </span
         >
         
+        <a href="http://localhost:1313/categories/iot/" class="singleCategory"> IoT</a> 
+        <a href="http://localhost:1313/categories/diy-tech-hacks/" class="singleCategory"> DIY Tech Hacks</a> 
         <time>Feb 23, 2025</time>
       </div>
     </div>
     <img
-      src=""
-      alt="Smart PC Control Alexa &#43; Remote Access"
+      src="/ImagenesPosts/Thumbnail%20post1.svg"
+      alt="How I Made Alexa Power On My PC (And Connect from Anywhere)"
       class="singleHeadImage"
     />
   </div>
@@ -205,12 +207,104 @@
    
 
   <div class="singleBottom">
-    <div class="singleContent"></div>
+    <div class="singleContent"><h1 id="damn-it-i-got-that-file-in-my-pc-at-home">Damn it! I got that file in my pc at home</h1>
+<p>You ever left home, halfway to wherever you&rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.</p>
+<p>Well this is actually a situation fairly often for me and I needed a way to turn it on remotely, access it securely and also be able to share files, no matter where I was. That&rsquo;s when I went down the rabbit hole of <strong>Wake-on-LAN</strong>, <strong>RustDesk</strong>, and <strong>self-hosted setups</strong>—with some inspiration of course.</p>
+<p>If you just want to make it and not too invested in the process or understading it here&rsquo;s an awesome video I found in under 2 minutes of how to set it up <a href="https://www.youtube.com/watch?v=5f9Lh_w1KSg">How to Turn On Your PC with Amazon Alexa (Tutorial) - YouTube</a></p>
+<p>So I recently came across a video of NetworkChuck talking about how his team uses RustDesk to get remote access to the machines that are at the office, at first, I thought &ldquo;well, this should be fairly easy with the most known apps such as AnyDesk, TeamViewer, etc&rdquo;, and he then went on explaining why most commercial solutions weren&rsquo;t a goot fit for his specific case.</p>
+<p>To start, RustDesk is open source, and we love open source, second of it, it is self hosted meaning more secure, but we will talk about it later. And third, it just so easy to set up and have it running.</p>
+<p>Now, the other part and actually the most interesting one (in my case) was the enigma of how can I turn on my pc remotely even if I&rsquo;m at the college or the office. Until that point I didn&rsquo;t know this magical thing called Wake-on-LAN, and to get a little bit more of insight of what the hell this is, here is a quick overview:</p>
+<h2 id="wake-on-lan">Wake-on-LAN</h2>
+<p>Think of <strong>Wake-on-LAN (WOL)</strong> like a <strong>remote wake-up call for your PC</strong>. Normally, when your computer is off, it ignores all network activity. But with <strong>WOL enabled</strong>, it listens for a special &ldquo;magic packet&rdquo; sent from another device (like Alexa, your phone, or a laptop).</p>
+<p>This <strong>magic packet</strong> is like a secret knock that tells your PC, <strong>“Hey, wake up!”</strong> It works using your PC’s <strong>MAC address</strong> (a unique network ID), which acts like its phone number on the network.</p>
+<p>For this to work:</p>
+<ul>
+<li>Your computer <strong>must stay slightly awake</strong>, even when off (which is why WOL is enabled in the BIOS).</li>
+<li>Your network adapter listens <strong>only for the magic packet</strong>, preventing unnecessary wake-ups.</li>
+<li>The command must come from a <strong>device on the same network</strong> or be properly routed through the internet.</li>
+</ul>
+<p>In my setup, Alexa sends this <strong>magic packet</strong> to my PC when I say, <strong>“Alexa, turn on Roberto”</strong> Once the computer wakes up, I can <strong>remotely access it</strong> from anywhere.</p>
+<h2 id="rustdesk-secure-and-self-hosted">Rustdesk secure and self-hosted</h2>
+<p>I’m still working on this part (mostly because I’m setting up my homelab), but once it’s fully up and running, I’ll update this section with all the details.</p>
+<p>For now, let’s talk about <strong>why self-hosting RustDesk is a game-changer</strong>. Unlike using RustDesk’s public servers, <strong>self-hosting gives you full control</strong> over your remote connections. That means:</p>
+<ul>
+<li><strong>More Security</strong> – Your data stays in your own network, not passing through third-party servers.</li>
+<li><strong>Better Speed</strong> – Since everything runs on your own server, there’s less delay compared to public relay servers.</li>
+<li><strong>No Dependence on External Services</strong> – If RustDesk’s servers go down, your setup keeps working.</li>
+<li><strong>Awesome Flexibility</strong> – You decide how it runs, tweak the settings, and even scale it to your needs.</li>
+</ul>
+<p>The best part? <strong>RustDesk actually encourages this</strong> by giving users the option to self-host. Not every remote access tool does that, and it’s refreshing to see a project that values user control.</p>
+<p>So yeah, self-hosting <strong>takes a bit of effort</strong>, but the payoff? <strong>A fast, private, and rock-solid remote access setup.</strong> Stay tuned for the full breakdown once my homelab is complete!</p>
+<h1 id="step-by-step">Step by step</h1>
+<h2 id="step-1-making-alexa-turn-on-the-pc"><strong>Step 1: Making Alexa Turn On the PC</strong></h2>
+<p>To pull this off, I used <strong>Wake-on-LAN via Alexa</strong> with a few extra tweaks. Here’s exactly how I got it working:</p>
+<h3 id="1-enable-wake-on-lan-on-windows"><strong>1. Enable Wake-on-LAN on Windows</strong></h3>
+<p>Before anything, your motherboard needs to support <strong>Wake-on-LAN (WOL)</strong>. Since BIOS settings vary by manufacturer, you first need to <strong>identify your motherboard model</strong>.</p>
+<ul>
+<li>I recommend using <strong><a href="https://www.cpuid.com/softwares/cpu-z.html">CPU-Z</a></strong>—a free tool that gives you all the details about your PC hardware.</li>
+<li>Once you have your motherboard name, search <strong>&ldquo;Enable WOL on [Your Motherboard Model]&rdquo;</strong> on YouTube or Google. There’s bound to be a tutorial for your specific setup.</li>
+</ul>
+<p>After enabling WOL in the BIOS, you need to activate it in Windows:</p>
+<ol>
+<li><strong>Open Device Manager</strong>
+<ul>
+<li>Right-click the <strong>Windows icon</strong> on the taskbar and select <strong>Device Manager</strong>.<img src="/ImagenesPosts/ManageDevicespt1.png" alt="ManageDevicespt1.png"></li>
+</ul>
+</li>
+<li><strong>Enable WOL in Network Adapter Settings</strong>
+<ul>
+<li>Expand <strong>Network Adapters</strong>, find your active adapter, and right-click <strong>Properties</strong>.<img src="/ImagenesPosts/ManageDevicespt2.png" alt="ManageDevicespt2.png"></li>
+<li>Go to <strong>Power Management</strong> and enable all the options (especially the last one).<img src="/ImagenesPosts/ManageDevicespt3.png" alt="ManageDevicespt3.png"></li>
+<li>Switch to the <strong>Advanced</strong> tab and ensure <strong>&ldquo;Wake on Magic Packet&rdquo;</strong> is enabled.</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-set-up-a-wake-on-lan-alexa-skill"><strong>2. Set Up a Wake-on-LAN Alexa Skill</strong></h3>
+<p>To make Alexa send the magic packet, I used <strong><a href="https://www.wolskill.com/index.html">Wake on LAN Alexa Skill</a></strong> (but you can choose another one if you prefer).</p>
+<h4 id="find-your-mac-address"><strong>Find Your MAC Address</strong></h4>
+<p>Before setting it up, you need your PC’s <strong>MAC address</strong>:</p>
+<ol>
+<li>Open <strong>Command Prompt</strong> (type <code>cmd</code> in Windows Search).<img src="/ImagenesPosts/Pasted%20image%2020250223150123.png" alt="Pasted image 20250223150123.png"></li>
+<li>Type: <code>getmac -v</code></li>
+<li>Hit <strong>Enter</strong> and find the MAC address for the adapter you configured earlier. It should look like this:  <strong>AA-11-BB-22-CC-33</strong>
+<img src="/ImagenesPosts/Pasted%20image%2020250223150743.png" alt="Pasted image 20250223150743.png"></li>
+</ol>
+<h4 id="connect-alexa-to-your-pc"><strong>Connect Alexa to Your PC</strong></h4>
+<ol>
+<li>Visit the <strong>Wake on LAN Alexa Skill page</strong> and link your Amazon account.</li>
+<li>Add a new device, enter your <strong>MAC address</strong>, and choose a custom name.
+<img src="/ImagenesPosts/Pasted%20image%2020250223151351.png" alt="Pasted image 20250223151351.png"></li>
+<li>Click on &ldquo;Add&rdquo; and you’re ready to go!</li>
+</ol>
+<h3 id="3-test-it"><strong>3. Test It</strong></h3>
+<p>Here’s where things got me at first.</p>
+<ul>
+<li>Alexa just <strong>wouldn&rsquo;t recognize the command</strong> at first. I triple-checked everything—still nothing.</li>
+<li>After doing these steps if I typed the commend on my phone it would work, but by voice it wouldn&rsquo;t, it was late and decided to troubleshoot another day.</li>
+<li>The next day, I tried again, <strong>fully expecting it to fail</strong>… and it worked! No idea what changed, I guess you just have to wait some time for it to update.</li>
+</ul>
+<h2 id="step-2-remote-access-with-rustdesk-self-hosted-of-course"><strong>Step 2: Remote Access with RustDesk (Self-Hosted, Of Course!)</strong></h2>
+<p>With Alexa successfully waking up my PC, the next step was <strong>securing remote access</strong> so I could control it from anywhere. Since I run <strong>Linux on my laptop</strong> and my PC is on <strong>Windows</strong>, I needed a <strong>reliable cross-platform solution</strong>—and finding one that actually worked well was a challenge.</p>
+<p>After testing a few options, I decided to <strong>self-host RustDesk</strong>, taking inspiration from NetworkChuck’s setup. Unlike using RustDesk’s public servers, <strong>self-hosting gives me full control</strong> over speed, security, and reliability. The plan is to:</p>
+<ul>
+<li><strong>Run RustDesk on Docker</strong> inside my homelab.</li>
+<li><strong>Configure my own relay and rendezvous servers</strong> to bypass third-party services.</li>
+</ul>
+<p>As of now, I’m still setting up the <strong>RustDesk server in my homelab</strong>, but once it’s fully operational, I’ll update this post with a <strong>detailed breakdown of the process</strong> and any quirks I run into. Stay tuned!</p>
+<h2 id="final-thoughts-what-did-i-learn"><strong>Final Thoughts: What Did I Learn?</strong></h2>
+<ul>
+<li><strong>Persistence pays off.</strong> Sometimes, tech just starts working for no reason.</li>
+<li><strong>Self-hosting is worth it.</strong> RustDesk gives me control over my data and tweak everything.</li>
+<li><strong>Wake-on-LAN + Alexa = Super handy.</strong></li>
+</ul>
+</div>
     <div class="singleRightBar"><div class="relatedPosts">
   <h2>Posts Relacionados</h2>
 
+          
+  <ul>
       
-  <p>No hay posts relacionados.</p>
+  </ul>
   
 </div>
 </div>

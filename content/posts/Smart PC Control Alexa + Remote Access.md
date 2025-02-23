@@ -1,7 +1,7 @@
 +++
 date = '2025-02-23T15:36:25-05:00'
 draft = false
-title = 'How I Made Alexa Power On My PC (And Connect from Anywhere)'
+title = 'Smart PC Control Alexa + Remote Access'
 description = "Ever wished you could turn on your PC with just your voice? I made Alexa do it—and set up secure remote access with RustDesk. Here’s how I pulled it off!"
 image = "/ImagenesPosts/Thumbnail post1.svg"
 imageBig = "/ImagenesPosts/Thumbnail post1.svg"
@@ -112,6 +112,14 @@ After testing a few options, I decided to **self-host RustDesk**, taking inspira
 - **Configure my own relay and rendezvous servers** to bypass third-party services.
 
 As of now, I’m still setting up the **RustDesk server in my homelab**, but once it’s fully operational, I’ll update this post with a **detailed breakdown of the process** and any quirks I run into. Stay tuned!
+
+``` python
+var = 1
+for i in j (
+	var ++
+)
+```
+
 
 ## **Final Thoughts: What Did I Learn?**
 - **Persistence pays off.** Sometimes, tech just starts working for no reason.
