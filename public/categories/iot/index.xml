@@ -6,21 +6,14 @@
     <description>Recent content in IoT on Yslids Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2025 23:01:48 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 15:36:25 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How I Made Alexa Power On My PC (And Connect from Anywhere)</title>
-      <link>http://localhost:1313/posts/how-i-made-alexa-power-on-my-pc-and-connect-from-anywhere/</link>
-      <pubDate>Tue, 18 Feb 2025 23:01:48 -0500</pubDate>
-      <guid>http://localhost:1313/posts/how-i-made-alexa-power-on-my-pc-and-connect-from-anywhere/</guid>
-      <description>&lt;h1 id=&#34;the-problem-wait-did-i-leave-my-pc-on&#34;&gt;The Problem: &amp;ldquo;Wait, Did I Leave My PC On?&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;You ever left home, halfway to wherever you&amp;rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.&lt;/p&gt;&#xA;&lt;p&gt;I needed a way to turn it on remotely and access it securely, no matter where I was. That&amp;rsquo;s when I went down the rabbit hole of &lt;strong&gt;Wake-on-LAN&lt;/strong&gt;, &lt;strong&gt;RustDesk&lt;/strong&gt;, and &lt;strong&gt;self-hosted setups&lt;/strong&gt;—with some inspiration from NetworkChuck, of course.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Smart PC Control: Alexa &#43; Remote Access</title>
-      <link>http://localhost:1313/posts/smart-pc-control/</link>
-      <pubDate>Tue, 18 Feb 2025 22:41:17 -0500</pubDate>
-      <guid>http://localhost:1313/posts/smart-pc-control/</guid>
-      <description>&lt;h1 id=&#34;the-problem-wait-did-i-leave-my-pc-on&#34;&gt;The Problem: &amp;ldquo;Wait, Did I Leave My PC On?&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;You ever left home, halfway to wherever you&amp;rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.&lt;/p&gt;&#xA;&lt;p&gt;I needed a way to turn it on remotely and access it securely, no matter where I was. That&amp;rsquo;s when I went down the rabbit hole of &lt;strong&gt;Wake-on-LAN&lt;/strong&gt;, &lt;strong&gt;RustDesk&lt;/strong&gt;, and &lt;strong&gt;self-hosted setups&lt;/strong&gt;—with some inspiration from NetworkChuck, of course.&lt;/p&gt;</description>
+      <title>Smart PC Control Alexa &#43; Remote Access</title>
+      <link>http://localhost:1313/posts/smart-pc-control-alexa-&#43;-remote-access/</link>
+      <pubDate>Sun, 23 Feb 2025 15:36:25 -0500</pubDate>
+      <guid>http://localhost:1313/posts/smart-pc-control-alexa-&#43;-remote-access/</guid>
+      <description>&lt;h1 id=&#34;damn-it-i-got-that-file-in-my-pc-at-home&#34;&gt;Damn it! I got that file in my pc at home&lt;/h1&gt;&#xA;&lt;p&gt;You ever left home, halfway to wherever you&amp;rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.&lt;/p&gt;&#xA;&lt;p&gt;Well this is actually a situation fairly often for me and I needed a way to turn it on remotely, access it securely and also be able to share files, no matter where I was. That&amp;rsquo;s when I went down the rabbit hole of &lt;strong&gt;Wake-on-LAN&lt;/strong&gt;, &lt;strong&gt;RustDesk&lt;/strong&gt;, and &lt;strong&gt;self-hosted setups&lt;/strong&gt;—with some inspiration of course.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
