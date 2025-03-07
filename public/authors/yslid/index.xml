@@ -1,47 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Yslid on Yslids Blog</title>
-    <link>http://localhost:1313/authors/yslid/</link>
-    <description>Recent content in Yslid on Yslids Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 23 Feb 2025 16:09:56 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/authors/yslid/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Post as a try</title>
-      <link>http://localhost:1313/posts/post-as-a-try/</link>
-      <pubDate>Sun, 23 Feb 2025 16:09:56 -0500</pubDate>
-      <guid>http://localhost:1313/posts/post-as-a-try/</guid>
-      <description>&lt;p&gt;hello world&lt;img src=&#34;http://localhost:1313/ImagenesPosts/WIN_20240328_21_51_10_Pro.jpg&#34; alt=&#34;WIN_20240328_21_51_10_Pro.jpg&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Smart PC Control Alexa &#43; Remote Access</title>
-      <link>http://localhost:1313/posts/smart-pc-control-alexa-&#43;-remote-access/</link>
-      <pubDate>Sun, 23 Feb 2025 15:36:25 -0500</pubDate>
-      <guid>http://localhost:1313/posts/smart-pc-control-alexa-&#43;-remote-access/</guid>
-      <description>&lt;h1 id=&#34;damn-it-i-got-that-file-in-my-pc-at-home&#34;&gt;Damn it! I got that file in my pc at home&lt;/h1&gt;&#xA;&lt;p&gt;You ever left home, halfway to wherever you&amp;rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.&lt;/p&gt;&#xA;&lt;p&gt;Well this is actually a situation fairly often for me and I needed a way to turn it on remotely, access it securely and also be able to share files, no matter where I was. That&amp;rsquo;s when I went down the rabbit hole of &lt;strong&gt;Wake-on-LAN&lt;/strong&gt;, &lt;strong&gt;RustDesk&lt;/strong&gt;, and &lt;strong&gt;self-hosted setups&lt;/strong&gt;—with some inspiration of course.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pendientes Blog</title>
-      <link>http://localhost:1313/posts/pendientes-app/</link>
-      <pubDate>Mon, 17 Feb 2025 23:36:10 -0500</pubDate>
-      <guid>http://localhost:1313/posts/pendientes-app/</guid>
-      <description>&lt;h2 id=&#34;pendientes-app&#34;&gt;Pendientes app:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Crear 4 posts con video&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Post sobre como prender el computador con alexa (faltan los videos)&lt;/li&gt;&#xA;&lt;li&gt;Post sobre el desarrollo del blog&lt;/li&gt;&#xA;&lt;li&gt;Post sobre la charla de ciberseguridad dada en la U&lt;/li&gt;&#xA;&lt;li&gt;Post sobre power automate&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Crear logo&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Pendientes del blog</title>
-      <link>http://localhost:1313/posts/testpost1/</link>
-      <pubDate>Thu, 06 Feb 2025 22:19:51 -0500</pubDate>
-      <guid>http://localhost:1313/posts/testpost1/</guid>
-      <description>&lt;h2 id=&#34;hi&#34;&gt;Hi&lt;/h2&gt;&#xA;&lt;p&gt;my name is fabian&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Try 2</title>
-      <link>http://localhost:1313/posts/try-2/</link>
-      <pubDate>Thu, 06 Feb 2025 20:37:37 -0500</pubDate>
-      <guid>http://localhost:1313/posts/try-2/</guid>
-      <description>&lt;h1 id=&#34;texto-de-ensayo&#34;&gt;texto de ensayo&lt;/h1&gt;&#xA;&lt;p&gt;Acá estoy probando el texto con los post y videos a la vez&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yslid on Yslids Blog</title><link>https://portfolio-yslid.vercel.app/authors/yslid/</link><description>Recent content in Yslid on Yslids Blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 23 Feb 2025 16:09:56 -0500</lastBuildDate><atom:link href="https://portfolio-yslid.vercel.app/authors/yslid/index.xml" rel="self" type="application/rss+xml"/><item><title>Post as a try</title><link>https://portfolio-yslid.vercel.app/posts/post-as-a-try/</link><pubDate>Sun, 23 Feb 2025 16:09:56 -0500</pubDate><guid>https://portfolio-yslid.vercel.app/posts/post-as-a-try/</guid><description>&lt;p>hello world&lt;img src="https://portfolio-yslid.vercel.app/ImagenesPosts/WIN_20240328_21_51_10_Pro.jpg" alt="WIN_20240328_21_51_10_Pro.jpg">&lt;/p></description></item><item><title>Smart PC Control Alexa + Remote Access</title><link>https://portfolio-yslid.vercel.app/posts/smart-pc-control-alexa-+-remote-access/</link><pubDate>Sun, 23 Feb 2025 15:36:25 -0500</pubDate><guid>https://portfolio-yslid.vercel.app/posts/smart-pc-control-alexa-+-remote-access/</guid><description>&lt;h1 id="damn-it-i-got-that-file-in-my-pc-at-home">Damn it! I got that file in my pc at home&lt;/h1>
+&lt;p>You ever left home, halfway to wherever you&amp;rsquo;re going, and suddenly remembered you needed something from your computer? That was me. The worst part? My PC was off.&lt;/p>
+&lt;p>Well this is actually a situation fairly often for me and I needed a way to turn it on remotely, access it securely and also be able to share files, no matter where I was. That&amp;rsquo;s when I went down the rabbit hole of &lt;strong>Wake-on-LAN&lt;/strong>, &lt;strong>RustDesk&lt;/strong>, and &lt;strong>self-hosted setups&lt;/strong>—with some inspiration of course.&lt;/p></description></item><item><title>Pendientes Blog</title><link>https://portfolio-yslid.vercel.app/posts/pendientes-app/</link><pubDate>Mon, 17 Feb 2025 23:36:10 -0500</pubDate><guid>https://portfolio-yslid.vercel.app/posts/pendientes-app/</guid><description>&lt;h2 id="pendientes-app">Pendientes app:&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Crear 4 posts con video&lt;/p>
+&lt;ul>
+&lt;li>Post sobre como prender el computador con alexa (faltan los videos)&lt;/li>
+&lt;li>Post sobre el desarrollo del blog&lt;/li>
+&lt;li>Post sobre la charla de ciberseguridad dada en la U&lt;/li>
+&lt;li>Post sobre power automate&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Crear logo&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Pendientes del blog</title><link>https://portfolio-yslid.vercel.app/posts/testpost1/</link><pubDate>Thu, 06 Feb 2025 22:19:51 -0500</pubDate><guid>https://portfolio-yslid.vercel.app/posts/testpost1/</guid><description>&lt;h2 id="hi">Hi&lt;/h2>
+&lt;p>my name is fabian&lt;/p></description></item><item><title>Try 2</title><link>https://portfolio-yslid.vercel.app/posts/try-2/</link><pubDate>Thu, 06 Feb 2025 20:37:37 -0500</pubDate><guid>https://portfolio-yslid.vercel.app/posts/try-2/</guid><description>&lt;h1 id="texto-de-ensayo">texto de ensayo&lt;/h1>
+&lt;p>Acá estoy probando el texto con los post y videos a la vez&lt;/p></description></item></channel></rss>
